@@ -13,7 +13,7 @@
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
     "test:e2e": "pnpm --filter @browser-ai/example-vite-text test:e2e",
-    "verify": "pnpm lint && pnpm --filter @browser-ai/core --filter @browser-ai/react build && pnpm typecheck && pnpm test && pnpm build"
+    "verify": "pnpm lint && pnpm build && pnpm typecheck && pnpm test"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.10",
