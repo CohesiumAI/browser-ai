@@ -1,0 +1,53 @@
+{
+  "name": "@browser-ai/modules-audio",
+  "version": "1.1.0",
+  "description": "Audio module for browser-ai: ASR + VAD + TTS (local-only)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@browser-ai/core": "workspace:*",
+    "@huggingface/transformers": "^3.0.0",
+    "onnxruntime-web": "^1.20.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.9",
+    "rimraf": "^5.0.0"
+  },
+  "peerDependencies": {
+    "@browser-ai/core": ">=1.0.0"
+  },
+  "keywords": [
+    "browser-ai",
+    "audio",
+    "asr",
+    "speech-recognition",
+    "tts",
+    "text-to-speech",
+    "vad",
+    "voice-activity-detection",
+    "local",
+    "privacy"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,109 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run verify
+
+  coverage:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - run: pnpm install --frozen-lockfile
+      - name: Run coverage (CDC §21.3 — 80% lines soft gate)
+        run: pnpm --filter @browser-ai/core test:coverage
+        continue-on-error: true
+
+  slo-gate:
+    name: SLO Hard Gate (CDC §19.1)
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+
+      - name: Check worker chunk gzip size (CDC §19.1 — ≤10MB hard gate)
+        run: |
+          MAX_SIZE_BYTES=10485760  # 10MB
+          FAILED=0
+
+          # Find all JS chunks in dist directories
+          for file in $(find . -path '*/dist/*.js' -type f 2>/dev/null); do
+            GZIP_SIZE=$(gzip -c "$file" | wc -c)
+            SIZE_MB=$(echo "scale=2; $GZIP_SIZE / 1048576" | bc)
+            
+            if [ "$GZIP_SIZE" -gt "$MAX_SIZE_BYTES" ]; then
+              echo "::error file=$file::Chunk exceeds 10MB gzip limit: ${SIZE_MB}MB"
+              FAILED=1
+            else
+              echo "✓ $file: ${SIZE_MB}MB gzip"
+            fi
+          done
+
+          if [ "$FAILED" -eq 1 ]; then
+            echo "::error::SLO hard gate failed: one or more chunks exceed 10MB gzip"
+            exit 1
+          fi
+
+          echo "✓ All chunks within SLO limit (≤10MB gzip)"
+
+  e2e:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: npx playwright install --with-deps chromium
+      - run: pnpm test:e2e

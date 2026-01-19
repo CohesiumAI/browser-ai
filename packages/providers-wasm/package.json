@@ -1,0 +1,31 @@
+{
+  "name": "@browser-ai/providers-wasm",
+  "version": "0.2.0",
+  "description": "WASM fallback provider for browser-ai — universal compatibility",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@browser-ai/core": "workspace:*",
+    "@huggingface/transformers": "^3.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.2.4",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.9"
+  },
+  "peerDependencies": {
+    "@browser-ai/core": ">=0.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

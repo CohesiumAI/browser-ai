@@ -1,0 +1,22 @@
+node_modules/
+dist/
+.turbo/
+*.log
+.DS_Store
+.env
+.env.local
+coverage/
+.next/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Release artifacts
+release-*/

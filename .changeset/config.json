@@ -1,0 +1,19 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
+  "changelog": "@changesets/cli/changelog",
+  "commit": false,
+  "fixed": [],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": [
+    "@browser-ai/example-next",
+    "@browser-ai/example-vite-full",
+    "@browser-ai/example-vite-memory",
+    "@browser-ai/example-vite-ocr",
+    "@browser-ai/example-vite-text",
+    "@browser-ai/example-vite-audio",
+    "@browser-ai/example-vite-vlm"
+  ]
+}

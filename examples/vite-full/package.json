@@ -1,0 +1,37 @@
+{
+  "name": "@browser-ai/example-vite-full",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
+  },
+  "dependencies": {
+    "@browser-ai/core": "workspace:*",
+    "@browser-ai/react": "workspace:*",
+    "@browser-ai/ui": "workspace:*",
+    "@browser-ai/providers-native": "workspace:*",
+    "@browser-ai/providers-webllm": "workspace:*",
+    "@browser-ai/providers-mock": "workspace:*",
+    "@browser-ai/providers-wasm": "workspace:*",
+    "@browser-ai/providers-smollm": "workspace:*",
+    "@browser-ai/modules-audio": "workspace:*",
+    "@browser-ai/modules-ocr": "workspace:*",
+    "@browser-ai/modules-memory": "workspace:*",
+    "@browser-ai/modules-vlm": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1"
+  }
+}
