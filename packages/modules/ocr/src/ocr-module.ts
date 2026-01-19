@@ -68,7 +68,7 @@ class OcrModuleImpl implements OcrModule {
     try {
       // Initialize Tesseract.js worker with specified language
       this.worker = await Tesseract.createWorker(this.language, 1, {
-        logger: (m) => {
+        logger: (m: Tesseract.LoggerMessage) => {
           if (m.status === 'recognizing text') {
             console.log(`[OCR] Progress: ${Math.round(m.progress * 100)}%`);
           }
@@ -168,7 +168,6 @@ class OcrModuleImpl implements OcrModule {
         await page.render({
           canvasContext: context as unknown as CanvasRenderingContext2D,
           viewport,
-          canvas: canvas as unknown as HTMLCanvasElement,
         }).promise;
 
         // Convert canvas to blob and OCR
