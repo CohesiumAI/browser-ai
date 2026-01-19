@@ -3,7 +3,7 @@
   "private": true,
   "packageManager": "pnpm@9.12.0",
   "scripts": {
-    "build": "pnpm -r --filter './packages/modules/*' build && pnpm -r --filter './packages/*' build && pnpm -r --filter './examples/*' build",
+    "build": "pnpm --filter @browser-ai/core build && pnpm -r --filter './packages/modules/*' build && pnpm -r --filter './packages/*' build && pnpm -r --filter './examples/*' build",
     "dev": "pnpm --filter @browser-ai/example-vite-text dev",
     "dev:next": "pnpm --filter @browser-ai/example-next dev",
     "changeset": "changeset",
