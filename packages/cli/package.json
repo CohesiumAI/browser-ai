@@ -28,7 +28,7 @@
     "@types/node": "^20.14.0",
     "typescript": "^5.6.3",
     "tsup": "^8.2.4",
-    "vitest": "^2.1.9"
+    "vitest": "^4.0.17"
   },
   "keywords": [
     "browser-ai",
