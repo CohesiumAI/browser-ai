@@ -2,7 +2,7 @@
 
 > **"The jQuery of local AI"** — A unified API that abstracts browser AI runtime fragmentation (Native / WebNN / WebGPU / WASM).
 
-[![npm version](https://img.shields.io/npm/v/@browser-ai/core.svg)](https://www.npmjs.com/package/@browser-ai/core)
+[![npm version](https://img.shields.io/npm/v/@cohesiumai/browser-ai.svg)](https://www.npmjs.com/package/@cohesiumai/browser-ai)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 
@@ -29,14 +29,11 @@ Running AI models directly in the browser offers **privacy**, **offline capabili
 ## Installation
 
 ```bash
-# npm
-npm install @browser-ai/core @browser-ai/react @browser-ai/providers-webllm
+# Install the main package
+npm install @cohesiumai/browser-ai
 
-# pnpm
-pnpm add @browser-ai/core @browser-ai/react @browser-ai/providers-webllm
-
-# yarn
-yarn add @browser-ai/core @browser-ai/react @browser-ai/providers-webllm
+# Or with providers for full functionality
+npm install @cohesiumai/browser-ai @browser-ai/providers-webllm
 ```
 
 ## Quick Start

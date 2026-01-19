@@ -310,6 +310,15 @@ importers:
         specifier: ^5.0.0
         version: 5.4.21(@types/node@20.19.28)
 
+  packages/browser-ai:
+    dependencies:
+      '@browser-ai/core':
+        specifier: workspace:*
+        version: link:../core
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
+
   packages/cli:
     dependencies:
       chalk:
