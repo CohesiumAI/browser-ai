@@ -18,6 +18,8 @@
   ],
   "scripts": {
     "build": "tsc",
+    "lint": "echo 'no lint'",
+    "typecheck": "tsc --noEmit",
     "dev": "tsc --watch",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest",

@@ -18,7 +18,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch",
+    "lint": "echo 'no lint'",
+    "typecheck": "tsc --noEmit",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest",
     "clean": "rimraf dist"
