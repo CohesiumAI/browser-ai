@@ -384,7 +384,7 @@ npm install -g @browser-ai/cli
 
 ```bash
 # Clone the repository
-git clone https://github.com/browser-ai/browser-ai.git
+git clone https://github.com/CohesiumAI/browser-ai.git
 cd browser-ai
 
 # Install dependencies

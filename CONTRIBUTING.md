@@ -18,7 +18,7 @@ Be respectful and inclusive. We welcome contributions from everyone.
 
 ```bash
 # Clone the repository
-git clone https://github.com/browser-ai/browser-ai.git
+git clone https://github.com/CohesiumAI/browser-ai.git
 cd browser-ai
 
 # Install dependencies
@@ -261,8 +261,8 @@ Major architecture changes should be discussed in an issue first. Consider:
 
 ## Questions?
 
-- Open a [Discussion](https://github.com/browser-ai/browser-ai/discussions)
-- Check existing [Issues](https://github.com/browser-ai/browser-ai/issues)
+- Open a [Discussion](https://github.com/CohesiumAI/browser-ai/discussions)
+- Check existing [Issues](https://github.com/CohesiumAI/browser-ai/issues)
 
 ## License
 

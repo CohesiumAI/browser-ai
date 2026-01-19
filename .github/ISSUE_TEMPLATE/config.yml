@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Questions & Discussions
-    url: https://github.com/browser-ai/browser-ai/discussions
+    url: https://github.com/CohesiumAI/browser-ai/discussions
     about: Ask questions and discuss ideas
   - name: Documentation
-    url: https://github.com/browser-ai/browser-ai#readme
+    url: https://github.com/CohesiumAI/browser-ai#readme
     about: Read the documentation
