@@ -19,7 +19,7 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "commander": "^12.1.0",
+    "commander": "^14.0.2",
     "chalk": "^5.3.0",
     "fs-extra": "^11.2.0"
   },

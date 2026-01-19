@@ -23,14 +23,14 @@
     "@browser-ai/modules-ocr": "workspace:*",
     "@browser-ai/modules-memory": "workspace:*",
     "@browser-ai/modules-vlm": "workspace:*",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
     "@playwright/test": "^1.48.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
     "typescript": "^5.5.3",
     "vite": "^5.4.1"
   }
