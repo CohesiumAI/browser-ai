@@ -4,27 +4,23 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 5
+    ignore:
+      # Ignore major version updates that may break build
+      - dependency-name: "vite"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "vitest"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
     groups:
       dev-dependencies:
         patterns:
           - "@types/*"
           - "eslint*"
-          - "typescript"
-          - "vitest"
-          - "vite"
         update-types:
           - "minor"
           - "patch"
-      production-dependencies:
-        patterns:
-          - "*"
-        exclude-patterns:
-          - "@types/*"
-          - "eslint*"
-          - "typescript"
-          - "vitest"
-          - "vite"
     commit-message:
       prefix: "chore(deps):"
 
