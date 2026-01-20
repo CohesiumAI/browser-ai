@@ -12,7 +12,7 @@
     "dev:next": "pnpm --filter @cohesiumai/example-next dev",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "pnpm -r --filter \"./packages/**\" build && changeset publish",
+    "release": "pnpm run build:core && pnpm run build:modules && pnpm run build:packages && changeset publish",
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
