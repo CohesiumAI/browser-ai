@@ -537,7 +537,11 @@ console.log(response.text);
 
 ## Version History
 
-### V2.1.1 — Current
+### V2.1.2 — Current
+- ✅ **Package Scope Migration** — All packages renamed from `@browser-ai/*` to `@cohesiumai/*`
+- ✅ **Version Alignment** — All packages synchronized to 2.1.x versioning
+
+### V2.1.1
 - ✅ **Deterministic Build Order** — 4-phase build (core → modules → packages → examples)
 - ✅ **Module Build Migration** — All modules use `tsup` for reliable `.d.ts` generation
 - ✅ **CI Hardening** — `.d.ts` verification step, Playwright fix
