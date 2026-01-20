@@ -21,14 +21,19 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       
-      - name: Build packages (core -> modules -> rest -> examples)
-        run: pnpm run build
+      - name: Build core
+        run: pnpm run build:core
+      
+      - name: Build modules
+        run: pnpm run build:modules
       
       - name: Verify .d.ts files exist for modules
         run: |
           echo "Checking declaration files..."
           for pkg in audio ocr memory vlm; do
             DTS="packages/modules/$pkg/dist/index.d.ts"
+            echo "--- $pkg ---"
+            ls -la "packages/modules/$pkg/dist/" || echo "dist/ not found"
             if [ ! -f "$DTS" ]; then
               echo "::error::Missing $DTS"
               exit 1
@@ -36,6 +41,12 @@ jobs:
             echo "✓ $DTS exists"
           done
           echo "✓ All module declaration files present"
+      
+      - name: Build other packages
+        run: pnpm run build:packages
+      
+      - name: Build examples
+        run: pnpm run build:examples
       
       - name: Lint, typecheck, test
         run: pnpm lint && pnpm typecheck && pnpm test
