@@ -8,12 +8,12 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "@browser-ai/example-next",
-    "@browser-ai/example-vite-full",
-    "@browser-ai/example-vite-memory",
-    "@browser-ai/example-vite-ocr",
-    "@browser-ai/example-vite-text",
-    "@browser-ai/example-vite-audio",
-    "@browser-ai/example-vite-vlm"
+    "@cohesiumai/example-next",
+    "@cohesiumai/example-vite-full",
+    "@cohesiumai/example-vite-memory",
+    "@cohesiumai/example-vite-ocr",
+    "@cohesiumai/example-vite-text",
+    "@cohesiumai/example-vite-audio",
+    "@cohesiumai/example-vite-vlm"
   ]
 }
