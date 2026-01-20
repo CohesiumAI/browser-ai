@@ -1,6 +1,6 @@
 {
   "name": "@cohesiumai/providers-wasm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "WASM fallback provider for browser-ai — universal compatibility",
   "type": "module",
   "main": "dist/index.js",
@@ -24,7 +24,7 @@
     "vitest": "^2.1.9"
   },
   "peerDependencies": {
-    "@cohesiumai/core": ">=0.2.0"
+    "@cohesiumai/core": ">=0.2.1"
   },
   "publishConfig": {
     "access": "public"

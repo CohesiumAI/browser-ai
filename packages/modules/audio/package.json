@@ -1,6 +1,6 @@
 {
   "name": "@cohesiumai/modules-audio",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Audio module for browser-ai: ASR + VAD + TTS (local-only)",
   "type": "module",
   "main": "./dist/index.js",
@@ -34,7 +34,7 @@
     "rimraf": "^5.0.0"
   },
   "peerDependencies": {
-    "@cohesiumai/core": ">=1.0.0"
+    "@cohesiumai/core": ">=0.2.1"
   },
   "keywords": [
     "browser-ai",

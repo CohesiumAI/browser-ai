@@ -1,5 +1,13 @@
 # @cohesiumai/providers-wasm
 
+## 1.0.1
+
+### Patch Changes
+
+- 5f07edd: Rename all packages from @browser-ai/_ to @cohesiumai/_ scope for npm publishing.
+- Updated dependencies [5f07edd]
+  - @cohesiumai/core@0.2.1
+
 ## 1.0.0
 
 ### Patch Changes

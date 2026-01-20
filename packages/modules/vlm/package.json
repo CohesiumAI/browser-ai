@@ -1,6 +1,6 @@
 {
   "name": "@cohesiumai/modules-vlm",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Local Vision-Language Model module for browser-ai - image understanding",
   "type": "module",
   "main": "./dist/index.js",
