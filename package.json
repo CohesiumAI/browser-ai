@@ -6,7 +6,7 @@
     "build": "pnpm run build:core && pnpm run build:modules && pnpm run build:packages && pnpm run build:examples",
     "build:core": "pnpm --filter @cohesiumai/core run build",
     "build:modules": "pnpm -r --filter \"./packages/modules/**\" run build",
-    "build:packages": "pnpm -r --filter \"./packages/**\" --filter \"!./packages/modules/**\" --filter \"!@cohesiumai/core\" run build",
+    "build:packages": "pnpm -r --workspace-concurrency=1 --filter \"./packages/**\" --filter \"!./packages/modules/**\" --filter \"!@cohesiumai/core\" run build",
     "build:examples": "pnpm -r --filter \"./examples/**\" run build",
     "dev": "pnpm --filter @cohesiumai/example-vite-text dev",
     "dev:next": "pnpm --filter @cohesiumai/example-next dev",
