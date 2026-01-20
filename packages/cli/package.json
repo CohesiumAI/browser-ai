@@ -1,6 +1,6 @@
 {
   "name": "@cohesiumai/cli",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "CLI tools for browser-ai",
   "type": "module",
   "bin": {

@@ -1,5 +1,11 @@
 # @cohesiumai/core
 
+## 2.1.2
+
+### Patch Changes
+
+- bf208bb: Publish all packages at version 2.1.1 to npm.
+
 ## 0.2.1
 
 ### Patch Changes
