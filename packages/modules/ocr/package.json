@@ -1,6 +1,6 @@
 {
   "name": "@browser-ai/modules-ocr",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Local OCR module for browser-ai - image and PDF text extraction",
   "type": "module",
   "main": "./dist/index.js",

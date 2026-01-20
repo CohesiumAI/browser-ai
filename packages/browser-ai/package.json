@@ -1,6 +1,6 @@
 {
   "name": "@cohesiumai/browser-ai",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The jQuery of local AI — A unified API that abstracts browser AI runtime fragmentation (Native / WebNN / WebGPU / WASM)",
   "type": "module",
   "main": "dist/index.js",
