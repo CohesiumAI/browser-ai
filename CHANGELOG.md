@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.1] - 2026-01-20
+
+### Fixed
+
+#### CI/Build System
+- **Module build migration** — Migrated all modules (`audio`, `ocr`, `memory`, `vlm`) from `tsc` to `tsup`
+  - Fixes `.d.ts` generation issues in CI environment
+  - Removed `composite`/`declaration` options from module `tsconfig.json` (tsup handles this)
+- **Deterministic build order** — Split `pnpm build` into 4 explicit phases:
+  1. `build:core` — Build `@browser-ai/core` first
+  2. `build:modules` — Build all `@browser-ai/modules-*` packages
+  3. `build:packages` — Build remaining packages (providers, react, ui, cli)
+  4. `build:examples` — Build all examples last
+- **CI verification step** — Added `.d.ts` existence check before typecheck
+- **Playwright fix** — Use `pnpm exec` instead of `npx` for Playwright installation in CI
+
+### Changed
+- Module `tsconfig.json` simplified (removed `composite`, `declaration`, `declarationMap`)
+- CI workflow split into granular build steps for better debugging
+
+---
+
 ## [2.1.0] - 2026-01-19
 
 ### Added

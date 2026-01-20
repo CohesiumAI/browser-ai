@@ -387,8 +387,15 @@ cd browser-ai
 # Install dependencies
 pnpm install
 
-# Build all packages
+# Build all packages (deterministic 4-phase order)
 pnpm build
+# Equivalent to: build:core → build:modules → build:packages → build:examples
+
+# Build individual phases
+pnpm run build:core      # @browser-ai/core first
+pnpm run build:modules   # @browser-ai/modules-* (audio, ocr, memory, vlm)
+pnpm run build:packages  # providers, react, ui, cli
+pnpm run build:examples  # all examples last
 
 # Run the Vite example
 pnpm dev
@@ -399,9 +406,18 @@ pnpm test
 # Type check
 pnpm typecheck
 
-# Full verification (lint + typecheck + test + build)
+# Full verification (lint + build + typecheck + test)
 pnpm run verify
 ```
+
+### Build Order
+
+The monorepo uses a **deterministic build order** to ensure TypeScript declaration files (`.d.ts`) are generated before dependent packages:
+
+1. **`@browser-ai/core`** — Core types and utilities (no dependencies)
+2. **`@browser-ai/modules-*`** — Audio, OCR, Memory, VLM modules (depend on core)
+3. **Other packages** — Providers, React bindings, UI, CLI
+4. **Examples** — Demo applications (depend on all packages)
 
 ## Modules Usage
 
@@ -521,7 +537,12 @@ console.log(response.text);
 
 ## Version History
 
-### V2.1 — Current
+### V2.1.1 — Current
+- ✅ **Deterministic Build Order** — 4-phase build (core → modules → packages → examples)
+- ✅ **Module Build Migration** — All modules use `tsup` for reliable `.d.ts` generation
+- ✅ **CI Hardening** — `.d.ts` verification step, Playwright fix
+
+### V2.1.0
 - ✅ **Unified Model Registry** — Central memory management for all modules
 - ✅ **Reference Counting** — Models stay loaded while in use
 - ✅ **Auto-Teardown** — Automatic unload after idle timeout
