@@ -1,6 +1,6 @@
 {
   "name": "@browser-ai/modules-vlm",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Local Vision-Language Model module for browser-ai - image understanding",
   "type": "module",
   "main": "./dist/index.js",
