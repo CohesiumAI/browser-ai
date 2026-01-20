@@ -1,6 +1,6 @@
 {
   "name": "@cohesiumai/modules-memory",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Local memory module for browser-ai - conversation context and local RAG",
   "type": "module",
   "main": "./dist/index.js",
