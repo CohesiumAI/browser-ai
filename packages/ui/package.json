@@ -1,6 +1,6 @@
 {
   "name": "@cohesiumai/ui",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,8 +20,8 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@cohesiumai/core": "2.1.1",
-    "@cohesiumai/react": "2.1.1"
+    "@cohesiumai/core": "2.1.2",
+    "@cohesiumai/react": "2.1.2"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",

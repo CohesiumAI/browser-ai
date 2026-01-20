@@ -1,5 +1,14 @@
 # @cohesiumai/ui
 
+## 2.1.2
+
+### Patch Changes
+
+- bf208bb: Publish all packages at version 2.1.1 to npm.
+- Updated dependencies [bf208bb]
+  - @cohesiumai/core@2.1.2
+  - @cohesiumai/react@2.1.2
+
 ## 0.1.2
 
 ### Patch Changes

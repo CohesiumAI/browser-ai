@@ -1,6 +1,6 @@
 {
   "name": "@cohesiumai/providers-webnn",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "WebNN provider for browser-ai — hardware-accelerated inference",
   "type": "module",
   "main": "dist/index.js",
@@ -15,7 +15,7 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@cohesiumai/core": "2.1.1"
+    "@cohesiumai/core": "2.1.2"
   },
   "devDependencies": {
     "tsup": "^8.2.4",
@@ -23,7 +23,7 @@
     "vitest": "^2.1.9"
   },
   "peerDependencies": {
-    "@cohesiumai/core": "2.1.1"
+    "@cohesiumai/core": "2.1.2"
   },
   "publishConfig": {
     "access": "public"
