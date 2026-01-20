@@ -1,6 +1,6 @@
 {
   "name": "@cohesiumai/modules-vlm",
-  "version": "3.0.1",
+  "version": "2.1.1",
   "description": "Local Vision-Language Model module for browser-ai - image understanding",
   "type": "module",
   "main": "./dist/index.js",
@@ -26,7 +26,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@cohesiumai/core": "workspace:*",
+    "@cohesiumai/core": "2.1.1",
     "@huggingface/transformers": "^3.0.0"
   },
   "devDependencies": {
@@ -35,7 +35,7 @@
     "rimraf": "^5.0.5"
   },
   "peerDependencies": {
-    "@cohesiumai/core": "workspace:*"
+    "@cohesiumai/core": "2.1.1"
   },
   "keywords": [
     "browser-ai",

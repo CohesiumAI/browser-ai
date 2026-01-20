@@ -1,6 +1,6 @@
 {
   "name": "@cohesiumai/providers-native",
-  "version": "0.1.2",
+  "version": "2.1.1",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,7 +20,7 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@cohesiumai/core": "workspace:*"
+    "@cohesiumai/core": "2.1.1"
   },
   "publishConfig": {
     "access": "public"
