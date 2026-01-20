@@ -16,7 +16,7 @@
     "src"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsup src/index.ts --format esm --dts",
     "lint": "echo 'no lint'",
     "typecheck": "tsc --noEmit",
     "test": "vitest run --passWithNoTests",
