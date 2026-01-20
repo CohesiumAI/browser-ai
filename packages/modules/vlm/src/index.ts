@@ -1,5 +1,5 @@
 /**
- * @browser-ai/modules-vlm
+ * @cohesiumai/modules-vlm
  * Local Vision-Language Model module for image understanding
  * v2.0 - CDC v2026.9 §12
  */

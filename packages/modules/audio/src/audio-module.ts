@@ -8,7 +8,7 @@
  * - Web Speech API fallback for TTS (Piper WASM planned)
  */
 
-import { createError, getGlobalRegistry, type UnifiedModelRegistry } from '@browser-ai/core';
+import { createError, getGlobalRegistry, type UnifiedModelRegistry } from '@cohesiumai/core';
 import type {
   AudioConfig,
   AsrResult,

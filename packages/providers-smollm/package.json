@@ -1,5 +1,5 @@
 {
-  "name": "@browser-ai/providers-smollm",
+  "name": "@cohesiumai/providers-smollm",
   "version": "0.1.1",
   "type": "module",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@browser-ai/core": "workspace:*",
+    "@cohesiumai/core": "workspace:*",
     "@huggingface/transformers": "^3.8.1"
   },
   "publishConfig": {

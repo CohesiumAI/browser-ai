@@ -7,7 +7,7 @@ import {
   type VlmResult,
   type VlmDiagnostics,
   type DeviceTier,
-} from '@browser-ai/modules-vlm';
+} from '@cohesiumai/modules-vlm';
 
 type Status = 'idle' | 'initializing' | 'ready' | 'processing' | 'error';
 

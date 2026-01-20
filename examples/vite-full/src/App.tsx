@@ -1,13 +1,13 @@
 /**
  * vite-full example — Full ChatGPT-like interface.
- * Uses @browser-ai/ui ChatApp with all features: Multi-chat, TTS, ASR, OCR, File attachments.
+ * Uses @cohesiumai/ui ChatApp with all features: Multi-chat, TTS, ASR, OCR, File attachments.
  * Model download triggers after first message.
  */
 
 import { useEffect, useRef, useCallback, useMemo, useState } from 'react';
-import { useLocalCompletion } from '@browser-ai/react';
-import { ChatApp } from '@browser-ai/ui';
-import { clearWebLLMModelCache } from '@browser-ai/providers-webllm';
+import { useLocalCompletion } from '@cohesiumai/react';
+import { ChatApp } from '@cohesiumai/ui';
+import { clearWebLLMModelCache } from '@cohesiumai/providers-webllm';
 
 /**
  * Clear all browser caches (Cache Storage + IndexedDB) and reload.
@@ -45,13 +45,13 @@ async function clearAllCaches(): Promise<void> {
   
   console.log('[ClearCache] ✅ All caches cleared, reloading...');
 }
-import { createMockProvider } from '@browser-ai/providers-mock';
-import { createNativeProvider } from '@browser-ai/providers-native';
-import { createWebLLMProvider } from '@browser-ai/providers-webllm';
-import { createWASMProvider } from '@browser-ai/providers-wasm';
-import { createSmolLMProvider } from '@browser-ai/providers-smollm';
-import { createOcrModule, createDocumentStore, type OcrModule, type DocumentStore } from '@browser-ai/modules-ocr';
-import type { BrowserAIConfig, ProviderId } from '@browser-ai/core';
+import { createMockProvider } from '@cohesiumai/providers-mock';
+import { createNativeProvider } from '@cohesiumai/providers-native';
+import { createWebLLMProvider } from '@cohesiumai/providers-webllm';
+import { createWASMProvider } from '@cohesiumai/providers-wasm';
+import { createSmolLMProvider } from '@cohesiumai/providers-smollm';
+import { createOcrModule, createDocumentStore, type OcrModule, type DocumentStore } from '@cohesiumai/modules-ocr';
+import type { BrowserAIConfig, ProviderId } from '@cohesiumai/core';
 
 // Runtime mobile detection (evaluated in browser, not at build time)
 function detectMobile(): boolean {

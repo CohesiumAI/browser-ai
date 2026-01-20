@@ -1,5 +1,5 @@
 /**
- * @browser-ai/react
+ * @cohesiumai/react
  */
 
 'use client';

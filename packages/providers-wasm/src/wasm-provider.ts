@@ -17,7 +17,7 @@ import type {
   ProviderId,
   DownloadProgress,
   ProgressCallback,
-} from '@browser-ai/core';
+} from '@cohesiumai/core';
 
 type Pipeline = (prompt: string, options?: Record<string, unknown>) => Promise<Array<{ generated_text: string }>>;
 

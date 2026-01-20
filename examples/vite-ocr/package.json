@@ -1,5 +1,5 @@
 {
-  "name": "@browser-ai/example-vite-ocr",
+  "name": "@cohesiumai/example-vite-ocr",
   "version": "1.2.0",
   "private": true,
   "type": "module",
@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@browser-ai/core": "workspace:*",
-    "@browser-ai/modules-ocr": "workspace:*",
+    "@cohesiumai/core": "workspace:*",
+    "@cohesiumai/modules-ocr": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

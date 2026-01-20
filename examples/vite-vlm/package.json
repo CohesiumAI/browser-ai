@@ -1,5 +1,5 @@
 {
-  "name": "@browser-ai/example-vite-vlm",
+  "name": "@cohesiumai/example-vite-vlm",
   "version": "2.0.0",
   "private": true,
   "type": "module",
@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@browser-ai/core": "workspace:*",
-    "@browser-ai/modules-vlm": "workspace:*",
+    "@cohesiumai/core": "workspace:*",
+    "@cohesiumai/modules-vlm": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

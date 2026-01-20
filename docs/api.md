@@ -84,8 +84,8 @@ interface BrowserAIConfig {
 #### Example
 
 ```typescript
-import { createBrowserAI } from '@browser-ai/core';
-import { createWebLLMProvider } from '@browser-ai/providers-webllm';
+import { createBrowserAI } from '@cohesiumai/core';
+import { createWebLLMProvider } from '@cohesiumai/providers-webllm';
 
 const ai = createBrowserAI({
   config: {
@@ -497,8 +497,8 @@ interface AIPopoverProps {
 #### Example
 
 ```tsx
-import { AIPopover } from '@browser-ai/ui';
-import { useLocalCompletion } from '@browser-ai/react';
+import { AIPopover } from '@cohesiumai/ui';
+import { useLocalCompletion } from '@cohesiumai/react';
 
 function App() {
   const completion = useLocalCompletion({
@@ -533,7 +533,7 @@ function createNativeProvider(): Provider;
 - `chrome://flags/#prompt-api-for-gemini-nano` = Enabled
 
 ```typescript
-import { createNativeProvider } from '@browser-ai/providers-native';
+import { createNativeProvider } from '@cohesiumai/providers-native';
 
 const provider = createNativeProvider();
 // provider.id === 'native'
@@ -552,7 +552,7 @@ function createWebLLMProvider(): Provider;
 - Sufficient storage for model (~500MB-5GB)
 
 ```typescript
-import { createWebLLMProvider } from '@browser-ai/providers-webllm';
+import { createWebLLMProvider } from '@cohesiumai/providers-webllm';
 
 const provider = createWebLLMProvider();
 // provider.id === 'webllm'
@@ -581,7 +581,7 @@ interface MockProviderOptions {
 ```
 
 ```typescript
-import { createMockProvider } from '@browser-ai/providers-mock';
+import { createMockProvider } from '@cohesiumai/providers-mock';
 
 // For happy path tests
 const mockProvider = createMockProvider({ scenario: 'happy' });
@@ -695,7 +695,7 @@ interface ModelSpec {
 Origin Private File System storage for persistent model caching.
 
 ```typescript
-import { createOPFSManager } from '@browser-ai/core';
+import { createOPFSManager } from '@cohesiumai/core';
 
 const opfs = createOPFSManager();
 
@@ -711,7 +711,7 @@ if (opfs.isAvailable()) {
 Automatic eviction of old models when storage quota is low.
 
 ```typescript
-import { createLRUCacheManager } from '@browser-ai/core';
+import { createLRUCacheManager } from '@cohesiumai/core';
 
 const cache = await createLRUCacheManager({
   maxUsageRatio: 0.8,
@@ -727,7 +727,7 @@ const stats = await cache.getStats();
 Load and manage multiple models simultaneously.
 
 ```typescript
-import { createModelManager } from '@browser-ai/core';
+import { createModelManager } from '@cohesiumai/core';
 
 const manager = createModelManager({
   maxLoadedModels: 2,
@@ -748,7 +748,7 @@ const active = manager.getActiveModel();
 Extensible plugin system for browser-ai.
 
 ```typescript
-import { createPluginManager, createLoggingPlugin } from '@browser-ai/core';
+import { createPluginManager, createLoggingPlugin } from '@cohesiumai/core';
 
 const plugins = createPluginManager();
 plugins.register(createLoggingPlugin({ prefix: '[AI]' }));
@@ -778,7 +778,7 @@ plugins.register({
 Central memory management for all AI models across core and modules.
 
 ```typescript
-import { getGlobalRegistry } from '@browser-ai/core';
+import { getGlobalRegistry } from '@cohesiumai/core';
 
 const registry = getGlobalRegistry({
   maxMemoryMB: 1500,           // Max total memory before LRU eviction
@@ -835,7 +835,7 @@ const usage = registry.getMemoryUsage();
 ### Audio Module (v1.1+)
 
 ```typescript
-import { createAudioModule } from '@browser-ai/modules-audio';
+import { createAudioModule } from '@cohesiumai/modules-audio';
 
 const audio = createAudioModule();
 await audio.init({ privacyMode: 'fully-local-managed', asr: { enabled: true } });
@@ -850,7 +850,7 @@ const speech = await audio.synthesize('Hello');
 ### OCR Module (v1.2+)
 
 ```typescript
-import { createOcrModule } from '@browser-ai/modules-ocr';
+import { createOcrModule } from '@cohesiumai/modules-ocr';
 
 const ocr = createOcrModule();
 await ocr.init({ privacyMode: 'fully-local-managed', language: 'eng' });
@@ -865,7 +865,7 @@ const chunks = await ocr.runExtractivePipeline(text, { chunkSizeChars: 1200 });
 ### Memory Module (v1.3+)
 
 ```typescript
-import { createMemoryModule } from '@browser-ai/modules-memory';
+import { createMemoryModule } from '@cohesiumai/modules-memory';
 
 const memory = createMemoryModule();
 await memory.init({ privacyMode: 'fully-local-managed', conversationId: 'chat-1' });
@@ -880,7 +880,7 @@ const results = await memory.search('query', { topK: 5 });
 ### VLM Module (v2.0+)
 
 ```typescript
-import { createVlmModule, isVlmSupported, detectTier } from '@browser-ai/modules-vlm';
+import { createVlmModule, isVlmSupported, detectTier } from '@cohesiumai/modules-vlm';
 
 const support = isVlmSupported();
 if (support.supported) {
@@ -903,7 +903,7 @@ if (support.supported) {
 ### Tier Detection
 
 ```typescript
-import { detectTier, getEffectiveTier } from '@browser-ai/core';
+import { detectTier, getEffectiveTier } from '@cohesiumai/core';
 
 const tier = detectTier(); // 1, 2, or 3
 const effective = getEffectiveTier(config.tierOverride); // respects override
@@ -912,7 +912,7 @@ const effective = getEffectiveTier(config.tierOverride); // respects override
 ### Config Validation
 
 ```typescript
-import { validateConfig, checkPublicBaseUrlRequired } from '@browser-ai/core';
+import { validateConfig, checkPublicBaseUrlRequired } from '@cohesiumai/core';
 
 validateConfig(config); // throws if invalid
 const urlCheck = checkPublicBaseUrlRequired(config);
@@ -921,7 +921,7 @@ const urlCheck = checkPublicBaseUrlRequired(config);
 ### Message Adapter
 
 ```typescript
-import { flattenSystemPrompts, validateMessages } from '@browser-ai/core';
+import { flattenSystemPrompts, validateMessages } from '@cohesiumai/core';
 
 const { messages, systemWasFlattened } = flattenSystemPrompts(originalMessages);
 validateMessages(messages); // throws if empty
@@ -930,7 +930,7 @@ validateMessages(messages); // throws if empty
 ### Retry Budgeter
 
 ```typescript
-import { createRetryBudgeter } from '@browser-ai/core';
+import { createRetryBudgeter } from '@cohesiumai/core';
 
 const budgeter = createRetryBudgeter({ maxRetries: 2 });
 const budget = budgeter.createBudget('request-id', 256);

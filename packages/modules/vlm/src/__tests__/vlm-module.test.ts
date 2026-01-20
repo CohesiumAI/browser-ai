@@ -1,6 +1,6 @@
 /**
  * VLM Module unit tests
- * @browser-ai/modules-vlm v2.0
+ * @cohesiumai/modules-vlm v2.0
  */
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';

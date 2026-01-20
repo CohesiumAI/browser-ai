@@ -1,17 +1,17 @@
-# @browser-ai/providers-webnn
+# @cohesiumai/providers-webnn
 
 > WebNN provider for browser-ai — Hardware-accelerated inference via Web Neural Network API.
 
 ## Installation
 
 ```bash
-pnpm add @browser-ai/providers-webnn
+pnpm add @cohesiumai/providers-webnn
 ```
 
 ## Usage
 
 ```typescript
-import { createWebNNProvider } from '@browser-ai/providers-webnn';
+import { createWebNNProvider } from '@cohesiumai/providers-webnn';
 
 const provider = createWebNNProvider();
 

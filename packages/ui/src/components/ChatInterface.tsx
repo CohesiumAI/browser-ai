@@ -12,7 +12,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import type { UseLocalCompletionResult } from '@browser-ai/react';
+import type { UseLocalCompletionResult } from '@cohesiumai/react';
 import { MessageBubble, type Message } from './MessageBubble.js';
 import { InputBar } from './InputBar.js';
 import { DownloadProgress } from './DownloadProgress.js';

@@ -12,7 +12,7 @@ import type {
   ModelSpec,
   ProviderId,
   ChatMessage,
-} from '@browser-ai/core';
+} from '@cohesiumai/core';
 
 import { NativeShim } from './native-shim.js';
 import type { NativeDriver, NativeSession } from './types.js';

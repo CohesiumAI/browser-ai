@@ -1,5 +1,5 @@
 /**
- * @browser-ai/providers-webnn
+ * @cohesiumai/providers-webnn
  * WebNN provider for hardware-accelerated inference.
  * V0.2
  */

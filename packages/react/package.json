@@ -1,5 +1,5 @@
 {
-  "name": "@browser-ai/react",
+  "name": "@cohesiumai/react",
   "version": "0.1.1",
   "type": "module",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@browser-ai/core": "workspace:*"
+    "@cohesiumai/core": "workspace:*"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0"

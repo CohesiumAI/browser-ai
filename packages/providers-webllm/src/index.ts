@@ -1,5 +1,5 @@
 /**
- * @browser-ai/providers-webllm
+ * @cohesiumai/providers-webllm
  */
 
 export { WebLLMProvider, createWebLLMProvider, clearWebLLMModelCache } from './webllm-provider.js';

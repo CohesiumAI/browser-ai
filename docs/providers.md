@@ -27,7 +27,7 @@ The Native provider uses Chrome's built-in AI capabilities (Prompt API with Gemi
 ### Usage
 
 ```typescript
-import { createNativeProvider } from '@browser-ai/providers-native';
+import { createNativeProvider } from '@cohesiumai/providers-native';
 
 const provider = createNativeProvider();
 ```
@@ -86,7 +86,7 @@ The WebLLM provider runs open-source LLMs directly in the browser using WebGPU.
 ### Usage
 
 ```typescript
-import { createWebLLMProvider } from '@browser-ai/providers-webllm';
+import { createWebLLMProvider } from '@cohesiumai/providers-webllm';
 
 const provider = createWebLLMProvider();
 ```
@@ -163,7 +163,7 @@ The WebNN provider uses the Web Neural Network API for hardware-accelerated infe
 ### Installation
 
 ```bash
-pnpm add @browser-ai/providers-webnn
+pnpm add @cohesiumai/providers-webnn
 ```
 
 ### Requirements
@@ -174,7 +174,7 @@ pnpm add @browser-ai/providers-webnn
 ### Usage
 
 ```typescript
-import { createWebNNProvider } from '@browser-ai/providers-webnn';
+import { createWebNNProvider } from '@cohesiumai/providers-webnn';
 
 const provider = createWebNNProvider();
 ```
@@ -221,7 +221,7 @@ The WASM provider is a universal fallback using Transformers.js with WebAssembly
 ### Installation
 
 ```bash
-pnpm add @browser-ai/providers-wasm
+pnpm add @cohesiumai/providers-wasm
 ```
 
 ### Requirements
@@ -232,7 +232,7 @@ pnpm add @browser-ai/providers-wasm
 ### Usage
 
 ```typescript
-import { createWASMProvider } from '@browser-ai/providers-wasm';
+import { createWASMProvider } from '@cohesiumai/providers-wasm';
 
 const provider = createWASMProvider();
 ```
@@ -291,7 +291,7 @@ The Mock provider simulates AI responses for testing without GPU requirements.
 ### Usage
 
 ```typescript
-import { createMockProvider } from '@browser-ai/providers-mock';
+import { createMockProvider } from '@cohesiumai/providers-mock';
 
 // Happy path
 const happyProvider = createMockProvider({ scenario: 'happy' });
@@ -338,7 +338,7 @@ Use the mock provider in CI/CD pipelines:
 
 ```typescript
 // test/setup.ts
-import { createMockProvider } from '@browser-ai/providers-mock';
+import { createMockProvider } from '@cohesiumai/providers-mock';
 
 export const testProviders = [
   createMockProvider({ scenario: 'happy' }),
@@ -416,7 +416,7 @@ const { selectionReport } = ai.getDiagnostics();
 Implement the `Provider` interface:
 
 ```typescript
-import type { Provider, BrowserAIConfig, GenerateParams } from '@browser-ai/core';
+import type { Provider, BrowserAIConfig, GenerateParams } from '@cohesiumai/core';
 
 class MyCustomProvider implements Provider {
   readonly id = 'custom' as const;

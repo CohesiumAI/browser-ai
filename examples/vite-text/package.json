@@ -1,5 +1,5 @@
 {
-  "name": "@browser-ai/example-vite-text",
+  "name": "@cohesiumai/example-vite-text",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -10,13 +10,13 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
-    "@browser-ai/core": "workspace:*",
-    "@browser-ai/providers-mock": "workspace:*",
-    "@browser-ai/providers-native": "workspace:*",
-    "@browser-ai/providers-smollm": "workspace:*",
-    "@browser-ai/providers-webllm": "workspace:*",
-    "@browser-ai/react": "workspace:*",
-    "@browser-ai/ui": "workspace:*",
+    "@cohesiumai/core": "workspace:*",
+    "@cohesiumai/providers-mock": "workspace:*",
+    "@cohesiumai/providers-native": "workspace:*",
+    "@cohesiumai/providers-smollm": "workspace:*",
+    "@cohesiumai/providers-webllm": "workspace:*",
+    "@cohesiumai/react": "workspace:*",
+    "@cohesiumai/ui": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

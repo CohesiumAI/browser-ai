@@ -7,7 +7,7 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { flushSync } from 'react-dom';
-import type { UseLocalCompletionResult } from '@browser-ai/react';
+import type { UseLocalCompletionResult } from '@cohesiumai/react';
 import { ConversationSidebar, type Conversation } from './ConversationSidebar.js';
 import { MessageBubble, type Message } from './MessageBubble.js';
 import { DownloadProgress } from './DownloadProgress.js';

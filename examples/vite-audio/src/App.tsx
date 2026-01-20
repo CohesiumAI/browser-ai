@@ -5,7 +5,7 @@ import {
   type AudioConfig,
   type AsrResult,
   type AudioDiagnostics,
-} from '@browser-ai/modules-audio';
+} from '@cohesiumai/modules-audio';
 
 type Status = 'idle' | 'initializing' | 'ready' | 'processing' | 'recording' | 'error';
 

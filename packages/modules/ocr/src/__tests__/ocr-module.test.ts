@@ -1,6 +1,6 @@
 /**
  * OCR Module unit tests
- * @browser-ai/modules-ocr v1.2
+ * @cohesiumai/modules-ocr v1.2
  */
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';

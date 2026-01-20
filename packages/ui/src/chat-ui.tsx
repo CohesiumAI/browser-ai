@@ -6,7 +6,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import type { UseLocalCompletionResult } from '@browser-ai/react';
+import type { UseLocalCompletionResult } from '@cohesiumai/react';
 import { DownloadOverlay } from './download-overlay.js';
 
 export interface ChatMessage {

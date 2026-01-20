@@ -1,5 +1,5 @@
 {
-  "name": "@browser-ai/providers-webllm",
+  "name": "@cohesiumai/providers-webllm",
   "version": "0.1.1",
   "type": "module",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@browser-ai/core": "workspace:*",
+    "@cohesiumai/core": "workspace:*",
     "@mlc-ai/web-llm": "^0.2.80"
   },
   "publishConfig": {

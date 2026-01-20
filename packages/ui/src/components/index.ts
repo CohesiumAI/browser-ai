@@ -1,5 +1,5 @@
 /**
- * @browser-ai/ui components
+ * @cohesiumai/ui components
  * Architecture modulaire: importe uniquement ce dont tu as besoin.
  */
 

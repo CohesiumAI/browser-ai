@@ -33,7 +33,7 @@ Running AI models directly in the browser offers **privacy**, **offline capabili
 npm install @cohesiumai/browser-ai
 
 # Or with providers for full functionality
-npm install @cohesiumai/browser-ai @browser-ai/providers-webllm
+npm install @cohesiumai/browser-ai @cohesiumai/providers-webllm
 ```
 
 ## Quick Start
@@ -41,9 +41,9 @@ npm install @cohesiumai/browser-ai @browser-ai/providers-webllm
 ### React
 
 ```tsx
-import { useLocalCompletion } from '@browser-ai/react';
-import { createNativeProvider } from '@browser-ai/providers-native';
-import { createWebLLMProvider } from '@browser-ai/providers-webllm';
+import { useLocalCompletion } from '@cohesiumai/react';
+import { createNativeProvider } from '@cohesiumai/providers-native';
+import { createWebLLMProvider } from '@cohesiumai/providers-webllm';
 
 const config = {
   privacyMode: 'strict', // 'strict' | 'relaxed' | 'any'
@@ -84,8 +84,8 @@ function App() {
 ### Vanilla JavaScript
 
 ```typescript
-import { createBrowserAI } from '@browser-ai/core';
-import { createWebLLMProvider } from '@browser-ai/providers-webllm';
+import { createBrowserAI } from '@cohesiumai/core';
+import { createWebLLMProvider } from '@cohesiumai/providers-webllm';
 
 const ai = createBrowserAI({
   config: { providerPolicy: { order: ['webllm'] } },
@@ -108,23 +108,23 @@ console.log(response.text);
 
 | Package | Description | Size |
 |---------|-------------|------|
-| `@browser-ai/core` | Core types, FSM, protocol, diagnostics, plugins | ~50KB |
-| `@browser-ai/providers-native` | Chrome AI (Prompt API) provider | ~3KB |
-| `@browser-ai/providers-webllm` | WebGPU/WebLLM provider | ~5KB + runtime |
-| `@browser-ai/providers-webnn` | WebNN hardware-accelerated provider | ~3KB |
-| `@browser-ai/providers-wasm` | WASM universal fallback provider | ~3KB |
-| `@browser-ai/providers-mock` | Mock provider for CI/testing | ~2KB |
-| `@browser-ai/react` | React hooks (`useLocalCompletion`) | ~4KB |
-| `@browser-ai/ui` | Pre-built UI components | ~8KB |
+| `@cohesiumai/core` | Core types, FSM, protocol, diagnostics, plugins | ~50KB |
+| `@cohesiumai/providers-native` | Chrome AI (Prompt API) provider | ~3KB |
+| `@cohesiumai/providers-webllm` | WebGPU/WebLLM provider | ~5KB + runtime |
+| `@cohesiumai/providers-webnn` | WebNN hardware-accelerated provider | ~3KB |
+| `@cohesiumai/providers-wasm` | WASM universal fallback provider | ~3KB |
+| `@cohesiumai/providers-mock` | Mock provider for CI/testing | ~2KB |
+| `@cohesiumai/react` | React hooks (`useLocalCompletion`) | ~4KB |
+| `@cohesiumai/ui` | Pre-built UI components | ~8KB |
 
 ### Modules (v1.1+)
 
 | Package | Version | Description |
 |---------|---------|-------------|
-| `@browser-ai/modules-audio` | v1.1 | Local ASR, VAD, TTS (speech-to-text, voice detection, text-to-speech) |
-| `@browser-ai/modules-ocr` | v1.2 | Local OCR for images & PDFs with text extraction pipeline |
-| `@browser-ai/modules-memory` | v1.3 | Conversation context & local memory with IndexedDB |
-| `@browser-ai/modules-vlm` | v2.0 | Vision-Language Model for image understanding (tier 3 only) |
+| `@cohesiumai/modules-audio` | v1.1 | Local ASR, VAD, TTS (speech-to-text, voice detection, text-to-speech) |
+| `@cohesiumai/modules-ocr` | v1.2 | Local OCR for images & PDFs with text extraction pipeline |
+| `@cohesiumai/modules-memory` | v1.3 | Conversation context & local memory with IndexedDB |
+| `@cohesiumai/modules-vlm` | v2.0 | Vision-Language Model for image understanding (tier 3 only) |
 
 ## Browser Support
 
@@ -198,7 +198,7 @@ console.log(diagnostics);
 Load and switch between multiple models:
 
 ```typescript
-import { createModelManager } from '@browser-ai/core';
+import { createModelManager } from '@cohesiumai/core';
 
 const manager = createModelManager({
   maxLoadedModels: 2,  // Keep up to 2 models in memory
@@ -221,7 +221,7 @@ const active = manager.getActiveModel();
 Extend browser-ai with plugins:
 
 ```typescript
-import { createPluginManager, createLoggingPlugin } from '@browser-ai/core';
+import { createPluginManager, createLoggingPlugin } from '@cohesiumai/core';
 
 const plugins = createPluginManager();
 
@@ -249,7 +249,7 @@ plugins.register({
 Persistent model storage that survives cache clearing:
 
 ```typescript
-import { createOPFSManager } from '@browser-ai/core';
+import { createOPFSManager } from '@cohesiumai/core';
 
 const opfs = createOPFSManager();
 
@@ -268,7 +268,7 @@ if (opfs.isAvailable()) {
 Automatic cache management:
 
 ```typescript
-import { createLRUCacheManager } from '@browser-ai/core';
+import { createLRUCacheManager } from '@cohesiumai/core';
 
 const cache = await createLRUCacheManager({
   maxUsageRatio: 0.8,      // Use up to 80% of quota
@@ -288,7 +288,7 @@ console.log(`${stats.modelCount} models, ${stats.usedBytes} bytes used`);
 Central memory management for all AI models across core and modules. Solves the problem of fragmented model loading where each module (audio, memory, VLM) loads models independently.
 
 ```typescript
-import { getGlobalRegistry } from '@browser-ai/core';
+import { getGlobalRegistry } from '@cohesiumai/core';
 
 const registry = getGlobalRegistry({
   maxMemoryMB: 1500,           // Max total memory before LRU eviction
@@ -327,7 +327,7 @@ const evicted = await registry.evictLRU(500); // Free 500MB
 
 ### How Modules Use It
 
-All modules (`@browser-ai/modules-audio`, `@browser-ai/modules-memory`, `@browser-ai/modules-vlm`) automatically use the global registry:
+All modules (`@cohesiumai/modules-audio`, `@cohesiumai/modules-memory`, `@cohesiumai/modules-vlm`) automatically use the global registry:
 
 ```typescript
 // Behind the scenes in audio module:
@@ -340,41 +340,41 @@ registry.release('Xenova/whisper-tiny');
 
 ## Installation from npm
 
-All packages are published under the `@browser-ai/*` scope on npm:
+All packages are published under the `@cohesiumai/*` scope on npm:
 
 ```bash
 # Core + React + a provider
-npm install @browser-ai/core @browser-ai/react @browser-ai/providers-webllm
+npm install @cohesiumai/core @cohesiumai/react @cohesiumai/providers-webllm
 
 # Or with pnpm
-pnpm add @browser-ai/core @browser-ai/react @browser-ai/providers-webllm
+pnpm add @cohesiumai/core @cohesiumai/react @cohesiumai/providers-webllm
 ```
 
 ### Available Packages
 
 ```bash
 # Core
-npm install @browser-ai/core
+npm install @cohesiumai/core
 
 # Providers
-npm install @browser-ai/providers-native
-npm install @browser-ai/providers-webllm
-npm install @browser-ai/providers-webnn
-npm install @browser-ai/providers-wasm
-npm install @browser-ai/providers-mock
+npm install @cohesiumai/providers-native
+npm install @cohesiumai/providers-webllm
+npm install @cohesiumai/providers-webnn
+npm install @cohesiumai/providers-wasm
+npm install @cohesiumai/providers-mock
 
 # React bindings
-npm install @browser-ai/react
-npm install @browser-ai/ui
+npm install @cohesiumai/react
+npm install @cohesiumai/ui
 
 # Modules
-npm install @browser-ai/modules-audio
-npm install @browser-ai/modules-ocr
-npm install @browser-ai/modules-memory
-npm install @browser-ai/modules-vlm
+npm install @cohesiumai/modules-audio
+npm install @cohesiumai/modules-ocr
+npm install @cohesiumai/modules-memory
+npm install @cohesiumai/modules-vlm
 
 # CLI
-npm install -g @browser-ai/cli
+npm install -g @cohesiumai/cli
 ```
 
 ## Development
@@ -392,8 +392,8 @@ pnpm build
 # Equivalent to: build:core → build:modules → build:packages → build:examples
 
 # Build individual phases
-pnpm run build:core      # @browser-ai/core first
-pnpm run build:modules   # @browser-ai/modules-* (audio, ocr, memory, vlm)
+pnpm run build:core      # @cohesiumai/core first
+pnpm run build:modules   # @cohesiumai/modules-* (audio, ocr, memory, vlm)
 pnpm run build:packages  # providers, react, ui, cli
 pnpm run build:examples  # all examples last
 
@@ -414,8 +414,8 @@ pnpm run verify
 
 The monorepo uses a **deterministic build order** to ensure TypeScript declaration files (`.d.ts`) are generated before dependent packages:
 
-1. **`@browser-ai/core`** — Core types and utilities (no dependencies)
-2. **`@browser-ai/modules-*`** — Audio, OCR, Memory, VLM modules (depend on core)
+1. **`@cohesiumai/core`** — Core types and utilities (no dependencies)
+2. **`@cohesiumai/modules-*`** — Audio, OCR, Memory, VLM modules (depend on core)
 3. **Other packages** — Providers, React bindings, UI, CLI
 4. **Examples** — Demo applications (depend on all packages)
 
@@ -424,7 +424,7 @@ The monorepo uses a **deterministic build order** to ensure TypeScript declarati
 ### Audio Module (v1.1)
 
 ```typescript
-import { createAudioModule } from '@browser-ai/modules-audio';
+import { createAudioModule } from '@cohesiumai/modules-audio';
 
 const audio = createAudioModule();
 await audio.init({
@@ -450,7 +450,7 @@ const speech = await audio.synthesize('Hello world!');
 ### OCR Module (v1.2)
 
 ```typescript
-import { createOcrModule } from '@browser-ai/modules-ocr';
+import { createOcrModule } from '@cohesiumai/modules-ocr';
 
 const ocr = createOcrModule();
 await ocr.init({
@@ -477,7 +477,7 @@ const chunks = await ocr.extractChunks(pdfResult.text, {
 ### Memory Module (v1.3)
 
 ```typescript
-import { createMemoryModule } from '@browser-ai/modules-memory';
+import { createMemoryModule } from '@cohesiumai/modules-memory';
 
 const memory = createMemoryModule();
 await memory.init({
@@ -499,7 +499,7 @@ console.log(context.summary, context.recentTurns);
 ### VLM Module (v2.0)
 
 ```typescript
-import { createVlmModule, detectTier } from '@browser-ai/modules-vlm';
+import { createVlmModule, detectTier } from '@cohesiumai/modules-vlm';
 
 // VLM requires tier 3 device (8+ CPU cores)
 const tier = detectTier();

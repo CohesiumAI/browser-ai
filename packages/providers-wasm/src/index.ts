@@ -1,5 +1,5 @@
 /**
- * @browser-ai/providers-wasm
+ * @cohesiumai/providers-wasm
  * WASM fallback provider for universal browser compatibility.
  * V0.2
  */

@@ -1,5 +1,5 @@
 {
-  "name": "@browser-ai/example-next",
+  "name": "@cohesiumai/example-next",
   "private": true,
   "version": "0.1.0",
   "scripts": {
@@ -8,12 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "@browser-ai/core": "workspace:*",
-    "@browser-ai/providers-mock": "workspace:*",
-    "@browser-ai/providers-native": "workspace:*",
-    "@browser-ai/providers-webllm": "workspace:*",
-    "@browser-ai/react": "workspace:*",
-    "@browser-ai/ui": "workspace:*",
+    "@cohesiumai/core": "workspace:*",
+    "@cohesiumai/providers-mock": "workspace:*",
+    "@cohesiumai/providers-native": "workspace:*",
+    "@cohesiumai/providers-webllm": "workspace:*",
+    "@cohesiumai/react": "workspace:*",
+    "@cohesiumai/ui": "workspace:*",
     "next": "^14.2.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

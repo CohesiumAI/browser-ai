@@ -14,49 +14,49 @@ This guide will help you integrate browser-ai into your project in under 5 minut
 
 ```bash
 # React projects
-pnpm add @browser-ai/core @browser-ai/react @browser-ai/providers-webllm
+pnpm add @cohesiumai/core @cohesiumai/react @cohesiumai/providers-webllm
 
 # Vanilla JS/TS projects
-pnpm add @browser-ai/core @browser-ai/providers-webllm
+pnpm add @cohesiumai/core @cohesiumai/providers-webllm
 ```
 
 ### Additional Providers (v0.2+)
 
 ```bash
 # Chrome AI Native provider
-pnpm add @browser-ai/providers-native
+pnpm add @cohesiumai/providers-native
 
 # WebNN hardware-accelerated provider
-pnpm add @browser-ai/providers-webnn
+pnpm add @cohesiumai/providers-webnn
 
 # WASM universal fallback provider
-pnpm add @browser-ai/providers-wasm
+pnpm add @cohesiumai/providers-wasm
 
 # Mock provider for testing
-pnpm add @browser-ai/providers-mock
+pnpm add @cohesiumai/providers-mock
 ```
 
 ### Modules (v1.1+)
 
 ```bash
 # Audio: ASR, VAD, TTS
-pnpm add @browser-ai/modules-audio
+pnpm add @cohesiumai/modules-audio
 
 # OCR: Images & PDFs
-pnpm add @browser-ai/modules-ocr
+pnpm add @cohesiumai/modules-ocr
 
 # Memory: Conversation context
-pnpm add @browser-ai/modules-memory
+pnpm add @cohesiumai/modules-memory
 
 # VLM: Vision-Language Model (tier 3 only)
-pnpm add @browser-ai/modules-vlm
+pnpm add @cohesiumai/modules-vlm
 ```
 
 ### CLI Tools (v1.0+)
 
 ```bash
 # Global installation
-pnpm add -g @browser-ai/cli
+pnpm add -g @cohesiumai/cli
 
 # Or use npx
 npx browser-ai eject-worker
@@ -67,9 +67,9 @@ npx browser-ai eject-worker
 ### Step 1: Configure Providers
 
 ```typescript
-import { createNativeProvider } from '@browser-ai/providers-native';
-import { createWebLLMProvider } from '@browser-ai/providers-webllm';
-import type { BrowserAIConfig } from '@browser-ai/core';
+import { createNativeProvider } from '@cohesiumai/providers-native';
+import { createWebLLMProvider } from '@cohesiumai/providers-webllm';
+import type { BrowserAIConfig } from '@cohesiumai/core';
 
 // Configuration
 const config: BrowserAIConfig = {
@@ -89,7 +89,7 @@ const providers = [
 ### Step 2: Initialize (React)
 
 ```tsx
-import { useLocalCompletion } from '@browser-ai/react';
+import { useLocalCompletion } from '@cohesiumai/react';
 
 function App() {
   const completion = useLocalCompletion({
@@ -119,7 +119,7 @@ function App() {
 ### Step 2: Initialize (Vanilla JS)
 
 ```typescript
-import { createBrowserAI } from '@browser-ai/core';
+import { createBrowserAI } from '@cohesiumai/core';
 
 const ai = createBrowserAI({ config, providers });
 
@@ -208,7 +208,7 @@ generate({
 ### Audio Module
 
 ```typescript
-import { createAudioModule } from '@browser-ai/modules-audio';
+import { createAudioModule } from '@cohesiumai/modules-audio';
 
 const audio = createAudioModule();
 await audio.init({
@@ -225,7 +225,7 @@ console.log(result.text);
 ### OCR Module
 
 ```typescript
-import { createOcrModule } from '@browser-ai/modules-ocr';
+import { createOcrModule } from '@cohesiumai/modules-ocr';
 
 const ocr = createOcrModule();
 await ocr.init({
@@ -241,7 +241,7 @@ console.log(result.text);
 ### Memory Module
 
 ```typescript
-import { createMemoryModule } from '@browser-ai/modules-memory';
+import { createMemoryModule } from '@cohesiumai/modules-memory';
 
 const memory = createMemoryModule();
 await memory.init({
@@ -257,7 +257,7 @@ const context = await memory.getContext();
 ### VLM Module (Tier 3 Only)
 
 ```typescript
-import { createVlmModule, isVlmSupported } from '@browser-ai/modules-vlm';
+import { createVlmModule, isVlmSupported } from '@cohesiumai/modules-vlm';
 
 // Check support first
 if (!isVlmSupported().supported) {

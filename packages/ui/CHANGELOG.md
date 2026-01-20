@@ -1,9 +1,9 @@
-# @browser-ai/ui
+# @cohesiumai/ui
 
 ## 0.1.1
 
 ### Patch Changes
 
 - Updated dependencies [b632c46]
-  - @browser-ai/core@0.2.0
-  - @browser-ai/react@0.1.1
+  - @cohesiumai/core@0.2.0
+  - @cohesiumai/react@0.1.1

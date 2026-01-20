@@ -10,7 +10,7 @@
  * - Rolling summarization
  */
 
-import { BrowserAIError, BrowserAIErrorCode, getGlobalRegistry, type UnifiedModelRegistry } from '@browser-ai/core';
+import { BrowserAIError, BrowserAIErrorCode, getGlobalRegistry, type UnifiedModelRegistry } from '@cohesiumai/core';
 import type {
   MemoryConfig,
   MemoryModule,

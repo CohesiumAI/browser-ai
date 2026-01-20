@@ -1,15 +1,15 @@
 /**
- * @browser-ai/ui
+ * @cohesiumai/ui
  * Composants UI modulaires pour browser-ai.
  * 
  * Architecture "jQuery de l'IA locale": importe uniquement ce dont tu as besoin.
  * 
  * @example
  * // Interface complète
- * import { ChatInterface } from '@browser-ai/ui';
+ * import { ChatInterface } from '@cohesiumai/ui';
  * 
  * // Composants individuels
- * import { MessageBubble, InputBar, DownloadProgress } from '@browser-ai/ui';
+ * import { MessageBubble, InputBar, DownloadProgress } from '@cohesiumai/ui';
  */
 
 'use client';

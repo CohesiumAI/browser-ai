@@ -11,7 +11,7 @@
  * Tier 3 only (high-end devices with WebGPU)
  */
 
-import { BrowserAIError, BrowserAIErrorCode, getGlobalRegistry, type UnifiedModelRegistry } from '@browser-ai/core';
+import { BrowserAIError, BrowserAIErrorCode, getGlobalRegistry, type UnifiedModelRegistry } from '@cohesiumai/core';
 import type {
   VlmConfig,
   VlmResult,
@@ -93,7 +93,7 @@ class VlmModuleImpl implements VlmModule {
       throw createVlmError(
         'ERROR_VLM_TIER_NOT_SUPPORTED',
         `VLM requires tier 3 device. Current tier: ${this.deviceTier}. ` +
-        `Consider using @browser-ai/modules-ocr for image text extraction on lower-tier devices.`
+        `Consider using @cohesiumai/modules-ocr for image text extraction on lower-tier devices.`
       );
     }
 
@@ -320,7 +320,7 @@ export function isVlmSupported(): { supported: boolean; tier: DeviceTier; reason
     return {
       supported: false,
       tier,
-      reason: `Device tier ${tier} is below the required tier 3. Consider using @browser-ai/modules-ocr instead.`,
+      reason: `Device tier ${tier} is below the required tier 3. Consider using @cohesiumai/modules-ocr instead.`,
     };
   }
   

@@ -15,7 +15,7 @@ import type {
   ModelSpec,
   ProviderId,
   DownloadProgress,
-} from '@browser-ai/core';
+} from '@cohesiumai/core';
 
 // WebNN types (not yet in lib.dom.d.ts for most browsers)
 interface MLContext {

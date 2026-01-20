@@ -1,5 +1,5 @@
 /**
- * @browser-ai/modules-memory
+ * @cohesiumai/modules-memory
  * Local memory module for conversation context and RAG
  * v1.3 - CDC v2026.9 §11
  */

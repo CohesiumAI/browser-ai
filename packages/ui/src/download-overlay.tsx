@@ -6,7 +6,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import type { UseLocalCompletionResult } from '@browser-ai/react';
+import type { UseLocalCompletionResult } from '@cohesiumai/react';
 
 export interface DownloadProgress {
   percent: number;

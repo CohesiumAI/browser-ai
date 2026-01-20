@@ -6,7 +6,7 @@
 
 import Tesseract from 'tesseract.js';
 import * as pdfjsLib from 'pdfjs-dist';
-import { BrowserAIError, BrowserAIErrorCode } from '@browser-ai/core';
+import { BrowserAIError, BrowserAIErrorCode } from '@cohesiumai/core';
 import type {
   OcrConfig,
   OcrResult,

@@ -1,5 +1,5 @@
 {
-  "name": "@browser-ai/example-vite-audio",
+  "name": "@cohesiumai/example-vite-audio",
   "private": true,
   "version": "1.1.0",
   "type": "module",
@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@browser-ai/core": "workspace:*",
-    "@browser-ai/modules-audio": "workspace:*",
+    "@cohesiumai/core": "workspace:*",
+    "@cohesiumai/modules-audio": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

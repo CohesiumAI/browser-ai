@@ -1,6 +1,6 @@
 /**
  * @cohesiumai/browser-ai
- * Main entry point - re-exports everything from @browser-ai/core
+ * Main entry point - re-exports everything from @cohesiumai/core
  */
 
-export * from '@browser-ai/core';
+export * from '@cohesiumai/core';

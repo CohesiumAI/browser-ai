@@ -4,13 +4,13 @@
  */
 
 import { useState, useEffect, useMemo } from 'react';
-import { useLocalCompletion } from '@browser-ai/react';
-import { AIPopover } from '@browser-ai/ui';
-import { createMockProvider } from '@browser-ai/providers-mock';
-import { createNativeProvider } from '@browser-ai/providers-native';
-import { createWebLLMProvider, clearWebLLMModelCache } from '@browser-ai/providers-webllm';
-import { createSmolLMProvider } from '@browser-ai/providers-smollm';
-import type { BrowserAIConfig, DiagnosticsSnapshot, ProviderId } from '@browser-ai/core';
+import { useLocalCompletion } from '@cohesiumai/react';
+import { AIPopover } from '@cohesiumai/ui';
+import { createMockProvider } from '@cohesiumai/providers-mock';
+import { createNativeProvider } from '@cohesiumai/providers-native';
+import { createWebLLMProvider, clearWebLLMModelCache } from '@cohesiumai/providers-webllm';
+import { createSmolLMProvider } from '@cohesiumai/providers-smollm';
+import type { BrowserAIConfig, DiagnosticsSnapshot, ProviderId } from '@cohesiumai/core';
 
 // Runtime mobile detection
 function detectMobile(): boolean {

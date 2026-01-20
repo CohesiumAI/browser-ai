@@ -11,7 +11,7 @@ import type {
   GenerateResult,
   ModelSpec,
   ProviderId,
-} from '@browser-ai/core';
+} from '@cohesiumai/core';
 
 export type MockScenario = 'happy' | 'slow' | 'hang' | 'crash' | 'quota';
 

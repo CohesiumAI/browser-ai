@@ -66,7 +66,7 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       - name: Run coverage (CDC §21.3 — 80% lines soft gate)
-        run: pnpm --filter @browser-ai/core test:coverage
+        run: pnpm --filter @cohesiumai/core test:coverage
         continue-on-error: true
 
   slo-gate:
@@ -126,5 +126,5 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
-      - run: pnpm --filter @browser-ai/example-vite-text exec playwright install --with-deps chromium
+      - run: pnpm --filter @cohesiumai/example-vite-text exec playwright install --with-deps chromium
       - run: pnpm test:e2e

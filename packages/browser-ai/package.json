@@ -21,7 +21,7 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@browser-ai/core": "workspace:*"
+    "@cohesiumai/core": "workspace:*"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

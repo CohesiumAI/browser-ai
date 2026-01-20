@@ -1,17 +1,17 @@
-# @browser-ai/providers-wasm
+# @cohesiumai/providers-wasm
 
 > WASM provider for browser-ai — Universal fallback using WebAssembly.
 
 ## Installation
 
 ```bash
-pnpm add @browser-ai/providers-wasm
+pnpm add @cohesiumai/providers-wasm
 ```
 
 ## Usage
 
 ```typescript
-import { createWASMProvider } from '@browser-ai/providers-wasm';
+import { createWASMProvider } from '@cohesiumai/providers-wasm';
 
 const provider = createWASMProvider();
 

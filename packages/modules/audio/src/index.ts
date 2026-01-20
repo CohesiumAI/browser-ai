@@ -1,5 +1,5 @@
 /**
- * @browser-ai/modules-audio
+ * @cohesiumai/modules-audio
  * Audio module for browser-ai v1.1: ASR + VAD + TTS (local-only)
  * 
  * CDC v2026.9 §9

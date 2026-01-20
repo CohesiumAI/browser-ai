@@ -40,9 +40,9 @@ When using browser-ai:
 
 This policy applies to:
 
-- `@browser-ai/core`
-- `@browser-ai/react`
-- `@browser-ai/ui`
-- `@browser-ai/providers-*`
-- `@browser-ai/modules-*`
-- `@browser-ai/cli`
+- `@cohesiumai/core`
+- `@cohesiumai/react`
+- `@cohesiumai/ui`
+- `@cohesiumai/providers-*`
+- `@cohesiumai/modules-*`
+- `@cohesiumai/cli`

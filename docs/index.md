@@ -37,9 +37,9 @@ browser-ai abstracts the complexity of running AI models in the browser by provi
 ┌─────────────────────────────────────────────────────────────────────┐
 │                         Your Application                             │
 ├─────────────────────────────────────────────────────────────────────┤
-│  @browser-ai/react    │    @browser-ai/ui    │    @browser-ai/cli   │
+│  @cohesiumai/react    │    @cohesiumai/ui    │    @cohesiumai/cli   │
 ├─────────────────────────────────────────────────────────────────────┤
-│                         @browser-ai/core                             │
+│                         @cohesiumai/core                             │
 │   FSM │ Protocol │ Diagnostics │ Storage │ Plugins │ Models        │
 ├─────────────────────────────────────────────────────────────────────┤
 │                         Provider Layer                               │
@@ -60,23 +60,23 @@ browser-ai abstracts the complexity of running AI models in the browser by provi
 ### Core (Text Generation)
 
 ```bash
-pnpm add @browser-ai/core @browser-ai/react @browser-ai/providers-webllm
+pnpm add @cohesiumai/core @cohesiumai/react @cohesiumai/providers-webllm
 ```
 
 ### Modules (v1.1+)
 
 ```bash
 # Audio (ASR, VAD, TTS)
-pnpm add @browser-ai/modules-audio
+pnpm add @cohesiumai/modules-audio
 
 # OCR (Images, PDFs)
-pnpm add @browser-ai/modules-ocr
+pnpm add @cohesiumai/modules-ocr
 
 # Memory (Conversation Context)
-pnpm add @browser-ai/modules-memory
+pnpm add @cohesiumai/modules-memory
 
 # VLM (Vision-Language, tier 3 only)
-pnpm add @browser-ai/modules-vlm
+pnpm add @cohesiumai/modules-vlm
 ```
 
 ---
@@ -84,8 +84,8 @@ pnpm add @browser-ai/modules-vlm
 ## 30-Second Example
 
 ```tsx
-import { useLocalCompletion } from '@browser-ai/react';
-import { createWebLLMProvider } from '@browser-ai/providers-webllm';
+import { useLocalCompletion } from '@cohesiumai/react';
+import { createWebLLMProvider } from '@cohesiumai/providers-webllm';
 
 function App() {
   const { state, output, generate } = useLocalCompletion({
@@ -117,24 +117,24 @@ function App() {
 
 | Package | Version | Description |
 |---------|---------|-------------|
-| `@browser-ai/core` | v0.1+ | Core types, FSM, protocol, diagnostics |
-| `@browser-ai/providers-native` | v0.1+ | Chrome AI (Prompt API) |
-| `@browser-ai/providers-webllm` | v0.1+ | WebGPU/WebLLM |
-| `@browser-ai/providers-webnn` | v0.2+ | WebNN hardware-accelerated |
-| `@browser-ai/providers-wasm` | v0.2+ | WASM universal fallback |
-| `@browser-ai/providers-mock` | v0.1+ | Mock for CI testing |
-| `@browser-ai/react` | v0.1+ | React hooks |
-| `@browser-ai/ui` | v0.1+ | Pre-built UI components |
-| `@browser-ai/cli` | v1.0+ | CLI tools |
+| `@cohesiumai/core` | v0.1+ | Core types, FSM, protocol, diagnostics |
+| `@cohesiumai/providers-native` | v0.1+ | Chrome AI (Prompt API) |
+| `@cohesiumai/providers-webllm` | v0.1+ | WebGPU/WebLLM |
+| `@cohesiumai/providers-webnn` | v0.2+ | WebNN hardware-accelerated |
+| `@cohesiumai/providers-wasm` | v0.2+ | WASM universal fallback |
+| `@cohesiumai/providers-mock` | v0.1+ | Mock for CI testing |
+| `@cohesiumai/react` | v0.1+ | React hooks |
+| `@cohesiumai/ui` | v0.1+ | Pre-built UI components |
+| `@cohesiumai/cli` | v1.0+ | CLI tools |
 
 ### Modules
 
 | Package | Version | Description |
 |---------|---------|-------------|
-| `@browser-ai/modules-audio` | v1.1+ | ASR, VAD, TTS (local) |
-| `@browser-ai/modules-ocr` | v1.2+ | Image & PDF OCR (local) |
-| `@browser-ai/modules-memory` | v1.3+ | Conversation context |
-| `@browser-ai/modules-vlm` | v2.0+ | Vision-Language Model |
+| `@cohesiumai/modules-audio` | v1.1+ | ASR, VAD, TTS (local) |
+| `@cohesiumai/modules-ocr` | v1.2+ | Image & PDF OCR (local) |
+| `@cohesiumai/modules-memory` | v1.3+ | Conversation context |
+| `@cohesiumai/modules-vlm` | v2.0+ | Vision-Language Model |
 
 ---
 

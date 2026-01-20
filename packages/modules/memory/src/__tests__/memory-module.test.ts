@@ -1,6 +1,6 @@
 /**
  * Memory Module unit tests
- * @browser-ai/modules-memory v1.3
+ * @cohesiumai/modules-memory v1.3
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';

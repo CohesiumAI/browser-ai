@@ -5,7 +5,7 @@ import {
   type OcrConfig,
   type OcrResult,
   type OcrDiagnostics,
-} from '@browser-ai/modules-ocr';
+} from '@cohesiumai/modules-ocr';
 
 type Status = 'idle' | 'initializing' | 'ready' | 'processing' | 'error';
 

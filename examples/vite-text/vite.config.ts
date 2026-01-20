@@ -10,6 +10,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    exclude: ['@browser-ai/core', '@browser-ai/providers-webllm'],
+    exclude: ['@cohesiumai/core', '@cohesiumai/providers-webllm'],
   },
 });

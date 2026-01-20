@@ -1,5 +1,5 @@
 {
-  "name": "@browser-ai/modules-memory",
+  "name": "@cohesiumai/modules-memory",
   "version": "2.0.0",
   "description": "Local memory module for browser-ai - conversation context and local RAG",
   "type": "module",
@@ -25,7 +25,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@browser-ai/core": "workspace:*",
+    "@cohesiumai/core": "workspace:*",
     "@huggingface/transformers": "^3.0.0"
   },
   "devDependencies": {
@@ -34,7 +34,7 @@
     "rimraf": "^5.0.5"
   },
   "peerDependencies": {
-    "@browser-ai/core": "workspace:*"
+    "@cohesiumai/core": "workspace:*"
   },
   "keywords": [
     "browser-ai",

@@ -1,5 +1,5 @@
 /**
- * @browser-ai/core
+ * @cohesiumai/core
  * Main entry point.
  * V1.0: Added models and plugins
  */

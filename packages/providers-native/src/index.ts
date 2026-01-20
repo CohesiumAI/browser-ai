@@ -1,5 +1,5 @@
 /**
- * @browser-ai/providers-native
+ * @cohesiumai/providers-native
  */
 
 export { NativeProvider, createNativeProvider } from './native-provider.js';

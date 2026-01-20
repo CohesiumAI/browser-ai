@@ -6,7 +6,7 @@ import {
   type Turn,
   type ConversationContext,
   type MemoryDiagnostics,
-} from '@browser-ai/modules-memory';
+} from '@cohesiumai/modules-memory';
 
 type Status = 'idle' | 'initializing' | 'ready' | 'processing' | 'error';
 

@@ -106,20 +106,20 @@ chore: upgrade dependencies
 ```
 browser-ai/
 ├── packages/
-│   ├── core/                 # Core library (@browser-ai/core)
-│   ├── react/                # React hooks (@browser-ai/react)
-│   ├── ui/                   # UI components (@browser-ai/ui)
-│   ├── cli/                  # CLI tools (@browser-ai/cli)
+│   ├── core/                 # Core library (@cohesiumai/core)
+│   ├── react/                # React hooks (@cohesiumai/react)
+│   ├── ui/                   # UI components (@cohesiumai/ui)
+│   ├── cli/                  # CLI tools (@cohesiumai/cli)
 │   ├── providers-native/     # Chrome AI provider
 │   ├── providers-webllm/     # WebLLM provider
 │   ├── providers-webnn/      # WebNN provider
 │   ├── providers-wasm/       # WASM fallback provider
 │   ├── providers-mock/       # Mock provider for CI
 │   └── modules/
-│       ├── audio/            # ASR, VAD, TTS (@browser-ai/modules-audio)
-│       ├── ocr/              # Image & PDF OCR (@browser-ai/modules-ocr)
-│       ├── memory/           # Conversation context (@browser-ai/modules-memory)
-│       └── vlm/              # Vision-Language Model (@browser-ai/modules-vlm)
+│       ├── audio/            # ASR, VAD, TTS (@cohesiumai/modules-audio)
+│       ├── ocr/              # Image & PDF OCR (@cohesiumai/modules-ocr)
+│       ├── memory/           # Conversation context (@cohesiumai/modules-memory)
+│       └── vlm/              # Vision-Language Model (@cohesiumai/modules-vlm)
 ├── examples/
 │   ├── vite-text/            # Text generation demo
 │   ├── vite-audio/           # Audio demo
@@ -158,8 +158,8 @@ browser-ai/
 ```typescript
 // Example test
 import { describe, it, expect } from 'vitest';
-import { createBrowserAI } from '@browser-ai/core';
-import { createMockProvider } from '@browser-ai/providers-mock';
+import { createBrowserAI } from '@cohesiumai/core';
+import { createMockProvider } from '@cohesiumai/providers-mock';
 
 describe('BrowserAI', () => {
   it('initializes successfully', async () => {

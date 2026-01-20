@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @browser-ai/cli — Command-line tools for browser-ai.
+ * @cohesiumai/cli — Command-line tools for browser-ai.
  * V1.0 CDC v2026.8 §16.4
  */
 

@@ -1,5 +1,5 @@
 /**
- * @browser-ai/modules-ocr
+ * @cohesiumai/modules-ocr
  * Local OCR module for image and PDF text extraction
  * v1.2 - CDC v2026.9 §10
  */

@@ -22,13 +22,13 @@ Local speech-to-text (ASR), voice activity detection (VAD), and text-to-speech (
 ### Installation
 
 ```bash
-pnpm add @browser-ai/modules-audio
+pnpm add @cohesiumai/modules-audio
 ```
 
 ### Quick Start
 
 ```typescript
-import { createAudioModule } from '@browser-ai/modules-audio';
+import { createAudioModule } from '@cohesiumai/modules-audio';
 
 const audio = createAudioModule();
 
@@ -122,13 +122,13 @@ Local OCR for images and PDFs using Tesseract.js.
 ### Installation
 
 ```bash
-pnpm add @browser-ai/modules-ocr
+pnpm add @cohesiumai/modules-ocr
 ```
 
 ### Quick Start
 
 ```typescript
-import { createOcrModule } from '@browser-ai/modules-ocr';
+import { createOcrModule } from '@cohesiumai/modules-ocr';
 
 const ocr = createOcrModule();
 
@@ -168,7 +168,7 @@ const chunks = await ocr.runExtractivePipeline(text, {
 Store and retrieve OCR results:
 
 ```typescript
-import { createDocumentStore } from '@browser-ai/modules-ocr';
+import { createDocumentStore } from '@cohesiumai/modules-ocr';
 
 const store = createDocumentStore();
 await store.init();
@@ -236,13 +236,13 @@ Local conversation context with IndexedDB storage and semantic search.
 ### Installation
 
 ```bash
-pnpm add @browser-ai/modules-memory
+pnpm add @cohesiumai/modules-memory
 ```
 
 ### Quick Start
 
 ```typescript
-import { createMemoryModule } from '@browser-ai/modules-memory';
+import { createMemoryModule } from '@cohesiumai/modules-memory';
 
 const memory = createMemoryModule();
 
@@ -329,13 +329,13 @@ Local Vision-Language Model for image understanding.
 ### Installation
 
 ```bash
-pnpm add @browser-ai/modules-vlm
+pnpm add @cohesiumai/modules-vlm
 ```
 
 ### Quick Start
 
 ```typescript
-import { createVlmModule, isVlmSupported } from '@browser-ai/modules-vlm';
+import { createVlmModule, isVlmSupported } from '@cohesiumai/modules-vlm';
 
 // Check device support first
 const support = isVlmSupported();
@@ -366,8 +366,8 @@ console.log(response.text);
 ### Safe Initialization
 
 ```typescript
-import { tryCreateVlmModule } from '@browser-ai/modules-vlm';
-import { createOcrModule } from '@browser-ai/modules-ocr';
+import { tryCreateVlmModule } from '@cohesiumai/modules-vlm';
+import { createOcrModule } from '@cohesiumai/modules-ocr';
 
 // Returns null if device doesn't support VLM
 const vlm = tryCreateVlmModule();

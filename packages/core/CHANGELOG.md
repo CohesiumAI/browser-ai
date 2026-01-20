@@ -1,4 +1,4 @@
-# @browser-ai/core
+# @cohesiumai/core
 
 ## 0.2.0
 

@@ -17,7 +17,7 @@ import type {
   ProviderId,
   DownloadProgress,
   ProgressCallback,
-} from '@browser-ai/core';
+} from '@cohesiumai/core';
 import { SmolLMWorkerClient } from './worker-client.js';
 
 // Dynamic import for Transformers.js to avoid SSR issues (desktop fallback)

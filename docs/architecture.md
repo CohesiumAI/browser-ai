@@ -10,10 +10,10 @@ browser-ai is designed as a modular, extensible library for running AI models lo
 ┌───────────────────────────────────────────────────────────────────────┐
 │                         Your Application                               │
 ├───────────────────────────────────────────────────────────────────────┤
-│  @browser-ai/react    │  @browser-ai/ui   │  @browser-ai/cli (v1.0+) │
+│  @cohesiumai/react    │  @cohesiumai/ui   │  @cohesiumai/cli (v1.0+) │
 │  (useLocalCompletion) │  (AIPopover)      │  (eject-worker)          │
 ├───────────────────────────────────────────────────────────────────────┤
-│                         @browser-ai/core                               │
+│                         @cohesiumai/core                               │
 │  ┌───────┐ ┌──────────┐ ┌───────────┐ ┌─────────┐ ┌─────────────────┐│
 │  │  FSM  │ │ Protocol │ │ Diagnostics│ │ Storage │ │ Plugins (v1.0+)││
 │  └───────┘ └──────────┘ └───────────┘ └─────────┘ └─────────────────┘│

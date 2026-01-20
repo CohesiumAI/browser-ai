@@ -1,5 +1,5 @@
 /**
- * @browser-ai/providers-smollm
+ * @cohesiumai/providers-smollm
  * SmolLM2 provider for mobile devices using Transformers.js
  */
 

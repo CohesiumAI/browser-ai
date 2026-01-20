@@ -16,8 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Fixes `.d.ts` generation issues in CI environment
   - Removed `composite`/`declaration` options from module `tsconfig.json` (tsup handles this)
 - **Deterministic build order** — Split `pnpm build` into 4 explicit phases:
-  1. `build:core` — Build `@browser-ai/core` first
-  2. `build:modules` — Build all `@browser-ai/modules-*` packages
+  1. `build:core` — Build `@cohesiumai/core` first
+  2. `build:modules` — Build all `@cohesiumai/modules-*` packages
   3. `build:packages` — Build remaining packages (providers, react, ui, cli)
   4. `build:examples` — Build all examples last
 - **CI verification step** — Added `.d.ts` existence check before typecheck
@@ -33,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-#### Unified Model Registry (`@browser-ai/core`)
+#### Unified Model Registry (`@cohesiumai/core`)
 - **`getGlobalRegistry()`** — Central memory management for all AI models across core and modules
   - Reference counting for shared model instances
   - Auto-teardown after configurable idle timeout
@@ -62,7 +62,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-#### VLM Module (`@browser-ai/modules-vlm`)
+#### VLM Module (`@cohesiumai/modules-vlm`)
 - **`createVlmModule()`** — Local Vision-Language Model for image understanding
   - **Tier 3 only** — Requires high-end device (8+ CPU cores, WebGPU)
   - Image captioning with `describeImage()`
@@ -85,7 +85,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-#### Memory Module (`@browser-ai/modules-memory`)
+#### Memory Module (`@cohesiumai/modules-memory`)
 - **`createMemoryModule()`** — Local conversation context with IndexedDB storage
   - `addTurn()` — Add conversation turns
   - `getContext()` — Get context for prompt injection (summary + recent turns)
@@ -107,7 +107,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-#### OCR Module (`@browser-ai/modules-ocr`)
+#### OCR Module (`@cohesiumai/modules-ocr`)
 - **`createOcrModule()`** — Local OCR for images and PDFs
   - `ocrImage()` — OCR a single image (Tesseract.js WASM)
   - `ocrPdf()` — OCR a PDF (text layer extraction + OCR fallback)
@@ -129,7 +129,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-#### Audio Module (`@browser-ai/modules-audio`)
+#### Audio Module (`@cohesiumai/modules-audio`)
 - **`createAudioModule()`** — Local audio processing (ASR, VAD, TTS)
   - `transcribe()` — Speech-to-text with Whisper (Transformers.js)
   - `transcribeStream()` — Real-time streaming transcription
@@ -153,33 +153,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-#### CLI (`@browser-ai/cli`)
+#### CLI (`@cohesiumai/cli`)
 - **`npx browser-ai eject-worker`** — Eject worker files for CSP compliance
   - Options: `--output <dir>`, `--force`, `--provider <provider>`
   - Generates `webllm-worker.js`, `wasm-worker.js`, `browser-ai.config.js`
   - COOP/COEP headers documentation
 
-#### OPFS Storage (`@browser-ai/core`)
+#### OPFS Storage (`@cohesiumai/core`)
 - **`createOPFSManager()`** — Origin Private File System storage
   - Persistent storage (survives cache clearing)
   - Shard-based storage for large model files
   - Metadata tracking with access times
   - Methods: `storeShard`, `readShard`, `hasModel`, `deleteModel`, `purgeAll`
 
-#### LRU Cache Management (`@browser-ai/core`)
+#### LRU Cache Management (`@cohesiumai/core`)
 - **`createLRUCacheManager()`** — Automatic model eviction
   - Configurable `maxUsageRatio` (default 80%)
   - Configurable `minFreeBytes` (default 500MB)
   - Methods: `getModels`, `evictForSpace`, `autoEvict`, `getStats`
 
-#### Multi-Model Support (`@browser-ai/core`)
+#### Multi-Model Support (`@cohesiumai/core`)
 - **`createModelManager()`** — Load multiple models simultaneously
   - Configurable `maxLoadedModels` (default 2)
   - `autoUnload` for automatic LRU eviction
   - Background preloading with `preloadEnabled`
   - Methods: `loadModel`, `unloadModel`, `setActiveModel`, `getActiveModel`
 
-#### Plugin Architecture (`@browser-ai/core`)
+#### Plugin Architecture (`@cohesiumai/core`)
 - **`createPluginManager()`** — Extensible plugin system
   - Lifecycle hooks: `beforeInit`, `afterInit`, `beforeGenerate`, `afterGenerate`
   - Sync hooks: `onToken`, `onStateChange`
@@ -201,16 +201,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 #### New Providers
-- **`@browser-ai/providers-webnn`** — WebNN hardware-accelerated inference
+- **`@cohesiumai/providers-webnn`** — WebNN hardware-accelerated inference
   - Web Neural Network API support
   - GPU/NPU acceleration
   - Chrome 127+ and Edge 127+ support
-- **`@browser-ai/providers-wasm`** — WASM universal fallback
+- **`@cohesiumai/providers-wasm`** — WASM universal fallback
   - Works in all modern browsers
   - Transformers.js WASM backend
   - CPU-based inference
 
-#### Core Improvements (`@browser-ai/core`)
+#### Core Improvements (`@cohesiumai/core`)
 - **Healthcheck Token-Aware** — Smarter stall detection
   - `HealthcheckWatchdog` with configurable intervals
   - Token-aware during GENERATING state
@@ -239,7 +239,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-#### Core (`@browser-ai/core`)
+#### Core (`@cohesiumai/core`)
 - **`createBrowserAI()`** — Main entry point with full lifecycle management
 - **FSM with 12 states** — Predictable state machine (CDC §5.1)
   - IDLE, BOOTING, SELECTING_PROVIDER, PREFLIGHT_QUOTA, CHECKING_CACHE
@@ -259,18 +259,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **standard** — Llama 3.1 8B Instruct (q4f16) ~4.5GB
 
 #### Providers
-- **`@browser-ai/providers-native`** — Chrome AI (Prompt API)
+- **`@cohesiumai/providers-native`** — Chrome AI (Prompt API)
   - ChromeWindowAiDriver + UnknownDriver
-- **`@browser-ai/providers-webllm`** — WebGPU/WebLLM
+- **`@cohesiumai/providers-webllm`** — WebGPU/WebLLM
   - WebLLM v0.2.73 pinned
-- **`@browser-ai/providers-mock`** — Mock for CI testing
+- **`@cohesiumai/providers-mock`** — Mock for CI testing
   - Scenarios: happy, slow, hang, crash, quota
 
-#### React (`@browser-ai/react`)
+#### React (`@cohesiumai/react`)
 - **`useLocalCompletion`** — React hook with streaming
 - **`useBrowserAI`** — Lower-level hook
 
-#### UI (`@browser-ai/ui`)
+#### UI (`@cohesiumai/ui`)
 - **`AIPopover`** — Pre-built chat popover
 - **`ProgressBar`** — Download progress component
 

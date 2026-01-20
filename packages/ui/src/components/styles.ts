@@ -1,5 +1,5 @@
 /**
- * Shared styles for @browser-ai/ui components.
+ * Shared styles for @cohesiumai/ui components.
  * Design system tokens and reusable style objects.
  */
 

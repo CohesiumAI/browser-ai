@@ -32,22 +32,22 @@ importers:
 
   examples/nextjs:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@browser-ai/providers-mock':
+      '@cohesiumai/providers-mock':
         specifier: workspace:*
         version: link:../../packages/providers-mock
-      '@browser-ai/providers-native':
+      '@cohesiumai/providers-native':
         specifier: workspace:*
         version: link:../../packages/providers-native
-      '@browser-ai/providers-webllm':
+      '@cohesiumai/providers-webllm':
         specifier: workspace:*
         version: link:../../packages/providers-webllm
-      '@browser-ai/react':
+      '@cohesiumai/react':
         specifier: workspace:*
         version: link:../../packages/react
-      '@browser-ai/ui':
+      '@cohesiumai/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       next:
@@ -75,10 +75,10 @@ importers:
 
   examples/vite-audio:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@browser-ai/modules-audio':
+      '@cohesiumai/modules-audio':
         specifier: workspace:*
         version: link:../../packages/modules/audio
       react:
@@ -106,40 +106,40 @@ importers:
 
   examples/vite-full:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@browser-ai/modules-audio':
+      '@cohesiumai/modules-audio':
         specifier: workspace:*
         version: link:../../packages/modules/audio
-      '@browser-ai/modules-memory':
+      '@cohesiumai/modules-memory':
         specifier: workspace:*
         version: link:../../packages/modules/memory
-      '@browser-ai/modules-ocr':
+      '@cohesiumai/modules-ocr':
         specifier: workspace:*
         version: link:../../packages/modules/ocr
-      '@browser-ai/modules-vlm':
+      '@cohesiumai/modules-vlm':
         specifier: workspace:*
         version: link:../../packages/modules/vlm
-      '@browser-ai/providers-mock':
+      '@cohesiumai/providers-mock':
         specifier: workspace:*
         version: link:../../packages/providers-mock
-      '@browser-ai/providers-native':
+      '@cohesiumai/providers-native':
         specifier: workspace:*
         version: link:../../packages/providers-native
-      '@browser-ai/providers-smollm':
+      '@cohesiumai/providers-smollm':
         specifier: workspace:*
         version: link:../../packages/providers-smollm
-      '@browser-ai/providers-wasm':
+      '@cohesiumai/providers-wasm':
         specifier: workspace:*
         version: link:../../packages/providers-wasm
-      '@browser-ai/providers-webllm':
+      '@cohesiumai/providers-webllm':
         specifier: workspace:*
         version: link:../../packages/providers-webllm
-      '@browser-ai/react':
+      '@cohesiumai/react':
         specifier: workspace:*
         version: link:../../packages/react
-      '@browser-ai/ui':
+      '@cohesiumai/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       react:
@@ -170,10 +170,10 @@ importers:
 
   examples/vite-memory:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@browser-ai/modules-memory':
+      '@cohesiumai/modules-memory':
         specifier: workspace:*
         version: link:../../packages/modules/memory
       react:
@@ -201,10 +201,10 @@ importers:
 
   examples/vite-ocr:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@browser-ai/modules-ocr':
+      '@cohesiumai/modules-ocr':
         specifier: workspace:*
         version: link:../../packages/modules/ocr
       react:
@@ -232,25 +232,25 @@ importers:
 
   examples/vite-text:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@browser-ai/providers-mock':
+      '@cohesiumai/providers-mock':
         specifier: workspace:*
         version: link:../../packages/providers-mock
-      '@browser-ai/providers-native':
+      '@cohesiumai/providers-native':
         specifier: workspace:*
         version: link:../../packages/providers-native
-      '@browser-ai/providers-smollm':
+      '@cohesiumai/providers-smollm':
         specifier: workspace:*
         version: link:../../packages/providers-smollm
-      '@browser-ai/providers-webllm':
+      '@cohesiumai/providers-webllm':
         specifier: workspace:*
         version: link:../../packages/providers-webllm
-      '@browser-ai/react':
+      '@cohesiumai/react':
         specifier: workspace:*
         version: link:../../packages/react
-      '@browser-ai/ui':
+      '@cohesiumai/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       react:
@@ -281,10 +281,10 @@ importers:
 
   examples/vite-vlm:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@browser-ai/modules-vlm':
+      '@cohesiumai/modules-vlm':
         specifier: workspace:*
         version: link:../../packages/modules/vlm
       react:
@@ -312,7 +312,7 @@ importers:
 
   packages/browser-ai:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../core
       typescript:
@@ -358,7 +358,7 @@ importers:
 
   packages/modules/audio:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../../core
       '@huggingface/transformers':
@@ -380,7 +380,7 @@ importers:
 
   packages/modules/memory:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../../core
       '@huggingface/transformers':
@@ -399,7 +399,7 @@ importers:
 
   packages/modules/ocr:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../../core
       pdfjs-dist:
@@ -421,7 +421,7 @@ importers:
 
   packages/modules/vlm:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../../core
       '@huggingface/transformers':
@@ -440,19 +440,19 @@ importers:
 
   packages/providers-mock:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../core
 
   packages/providers-native:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../core
 
   packages/providers-smollm:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../core
       '@huggingface/transformers':
@@ -461,7 +461,7 @@ importers:
 
   packages/providers-wasm:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../core
       '@huggingface/transformers':
@@ -480,7 +480,7 @@ importers:
 
   packages/providers-webllm:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../core
       '@mlc-ai/web-llm':
@@ -489,7 +489,7 @@ importers:
 
   packages/providers-webnn:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -505,7 +505,7 @@ importers:
 
   packages/react:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../core
       react:
@@ -518,10 +518,10 @@ importers:
 
   packages/ui:
     dependencies:
-      '@browser-ai/core':
+      '@cohesiumai/core':
         specifier: workspace:*
         version: link:../core
-      '@browser-ai/react':
+      '@cohesiumai/react':
         specifier: workspace:*
         version: link:../react
       react:

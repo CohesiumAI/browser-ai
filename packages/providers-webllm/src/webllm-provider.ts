@@ -13,7 +13,7 @@ import type {
   ProviderId,
   DownloadProgress,
   ProgressCallback,
-} from '@browser-ai/core';
+} from '@cohesiumai/core';
 
 import * as webllm from '@mlc-ai/web-llm';
 

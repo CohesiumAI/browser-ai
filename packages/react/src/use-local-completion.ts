@@ -13,8 +13,8 @@ import type {
   RuntimeState,
   DiagnosticsSnapshot,
   Provider,
-} from '@browser-ai/core';
-import { createBrowserAI, createIdleState } from '@browser-ai/core';
+} from '@cohesiumai/core';
+import { createBrowserAI, createIdleState } from '@cohesiumai/core';
 
 export interface UseLocalCompletionOptions {
   config: BrowserAIConfig;

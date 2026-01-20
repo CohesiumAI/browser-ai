@@ -1,11 +1,11 @@
-# @browser-ai/core
+# @cohesiumai/core
 
 > Core package for browser-ai — Types, FSM, protocol, storage, and plugins.
 
 ## Installation
 
 ```bash
-pnpm add @browser-ai/core
+pnpm add @cohesiumai/core
 ```
 
 ## Features
@@ -40,7 +40,7 @@ pnpm add @browser-ai/core
 ### Basic
 
 ```typescript
-import { createBrowserAI } from '@browser-ai/core';
+import { createBrowserAI } from '@cohesiumai/core';
 
 const ai = createBrowserAI({
   config: { providerPolicy: { order: ['native', 'webllm'] } },
@@ -54,7 +54,7 @@ const { result } = ai.generate({ messages: [...] });
 ### Multi-Model (V1.0)
 
 ```typescript
-import { createModelManager } from '@browser-ai/core';
+import { createModelManager } from '@cohesiumai/core';
 
 const manager = createModelManager({ maxLoadedModels: 2 });
 await manager.loadModel(spec1, provider1);
@@ -65,7 +65,7 @@ await manager.setActiveModel('model-2');
 ### Plugins (V1.0)
 
 ```typescript
-import { createPluginManager, createLoggingPlugin } from '@browser-ai/core';
+import { createPluginManager, createLoggingPlugin } from '@cohesiumai/core';
 
 const plugins = createPluginManager();
 plugins.register(createLoggingPlugin());
@@ -78,7 +78,7 @@ plugins.register({
 ### OPFS Storage (V1.0)
 
 ```typescript
-import { createOPFSManager } from '@browser-ai/core';
+import { createOPFSManager } from '@cohesiumai/core';
 
 const opfs = createOPFSManager();
 if (opfs.isAvailable()) {
@@ -89,7 +89,7 @@ if (opfs.isAvailable()) {
 ### LRU Cache (V1.0)
 
 ```typescript
-import { createLRUCacheManager } from '@browser-ai/core';
+import { createLRUCacheManager } from '@cohesiumai/core';
 
 const cache = await createLRUCacheManager({ maxUsageRatio: 0.8 });
 await cache.autoEvict();
@@ -98,7 +98,7 @@ await cache.autoEvict();
 ### Model Registry (V2.1)
 
 ```typescript
-import { getGlobalRegistry } from '@browser-ai/core';
+import { getGlobalRegistry } from '@cohesiumai/core';
 
 const registry = getGlobalRegistry({ maxMemoryMB: 1500 });
 

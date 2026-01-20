@@ -14,14 +14,14 @@ Common issues and solutions for browser-ai v0.1 to v2.1.
 
 ## Installation Issues
 
-### `Module not found: @browser-ai/core`
+### `Module not found: @cohesiumai/core`
 
 **Cause**: Package not installed or incorrect import path.
 
 **Solution**:
 ```bash
 # Ensure all packages are installed
-pnpm add @browser-ai/core @browser-ai/react @browser-ai/providers-webllm
+pnpm add @cohesiumai/core @cohesiumai/react @cohesiumai/providers-webllm
 ```
 
 ### TypeScript errors with strict mode
@@ -104,7 +104,7 @@ try {
 
 **Solution**: This was fixed in v0.1. Ensure you're using the latest version:
 ```bash
-pnpm update @browser-ai/react
+pnpm update @cohesiumai/react
 ```
 
 ### `GENERATION_STALLED` after abort
@@ -205,7 +205,7 @@ if (!window.indexedDB) {
 
 **Solution**:
 ```typescript
-import { isVlmSupported, createOcrModule } from '@browser-ai/modules-vlm';
+import { isVlmSupported, createOcrModule } from '@cohesiumai/modules-vlm';
 
 const support = isVlmSupported();
 if (!support.supported) {
