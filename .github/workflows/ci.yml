@@ -20,7 +20,25 @@ jobs:
           cache: 'pnpm'
 
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run verify
+      
+      - name: Build packages (core -> modules -> rest -> examples)
+        run: pnpm run build
+      
+      - name: Verify .d.ts files exist for modules
+        run: |
+          echo "Checking declaration files..."
+          for pkg in audio ocr memory vlm; do
+            DTS="packages/modules/$pkg/dist/index.d.ts"
+            if [ ! -f "$DTS" ]; then
+              echo "::error::Missing $DTS"
+              exit 1
+            fi
+            echo "✓ $DTS exists"
+          done
+          echo "✓ All module declaration files present"
+      
+      - name: Lint, typecheck, test
+        run: pnpm lint && pnpm typecheck && pnpm test
 
   coverage:
     runs-on: ubuntu-latest

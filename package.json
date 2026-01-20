@@ -3,7 +3,11 @@
   "private": true,
   "packageManager": "pnpm@9.12.0",
   "scripts": {
-    "build": "pnpm --filter @browser-ai/core build && pnpm --filter '@browser-ai/modules-*' build && pnpm --filter './packages/*' --filter '!@browser-ai/core' build && pnpm --filter './examples/*' build",
+    "build": "pnpm run build:core && pnpm run build:modules && pnpm run build:packages && pnpm run build:examples",
+    "build:core": "pnpm --filter @browser-ai/core run build",
+    "build:modules": "pnpm -r --filter \"./packages/modules/**\" run build",
+    "build:packages": "pnpm -r --filter \"./packages/**\" --filter \"!./packages/modules/**\" --filter \"!@browser-ai/core\" run build",
+    "build:examples": "pnpm -r --filter \"./examples/**\" run build",
     "dev": "pnpm --filter @browser-ai/example-vite-text dev",
     "dev:next": "pnpm --filter @browser-ai/example-next dev",
     "changeset": "changeset",
